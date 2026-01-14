@@ -1,0 +1,12 @@
+{
+  "name": "agenario-landing",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "start": "vercel start"
+  },
+  "dependencies": {
+    "resend": "^2.0.0"
+  }
+}
