@@ -11,7 +11,7 @@
   <meta name="robots" content="index, follow" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="Agenario.jpg">
+  <link rel="icon" type="image/jpg" href="Agenario.jpg">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -38,7 +38,7 @@
     "description": "AI auditing and compliance agency ensuring safe, ethical, and legally compliant AI models.",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-XXX-XXX-XXXX",
+      "telephone": "",
       "contactType": "customer service"
     },
     "sameAs": [
@@ -239,8 +239,9 @@
 
     /* Icon glow - enhanced */
     .icon-glow {
-      filter: drop-shadow(0 0 8px rgba(42, 157, 143, 1)) drop-shadow(0 0 16px rgba(58, 28, 113, 0.8));
-      color: #2A9D8F !important;
+      filter: drop-shadow(0 0 10px rgba(42, 157, 143, 1)) drop-shadow(0 0 20px rgba(58, 28, 113, 1));
+      color: #ffffff !important;
+      text-shadow: 0 0 10px rgba(42, 157, 143, 0.8), 0 0 20px rgba(58, 28, 113, 0.6);
     }
 
     /* Animated particles overlay */
@@ -522,7 +523,7 @@
       Meet the Founder
     </h2>
     <div class="glass rounded-3xl p-8 max-w-md mx-auto">
-      <img src="1768114035312.jpg" alt="Pranav Raj M." class="w-28 h-28 rounded-full mx-auto mb-6 border-2 border-primary grayscale" style="box-shadow: 0 0 10px rgba(58, 28, 113, 0.5);">
+      <img src="1768114035312.jpg" alt="Pranav Raj M." class="w-28 h-28 rounded-full mx-auto mb-6 mt-4 border-2 border-primary grayscale" style="box-shadow: 0 0 10px rgba(58, 28, 113, 0.5);">
       <h3 class="text-2xl font-bold mb-2 text-white">Pranav Raj M.</h3>
       <p class="text-muted mb-6">Founder of Agenario</p>
       <a href="https://in.linkedin.com/in/moganti-pranav-raj" target="_blank" class="inline-flex items-center bg-secondary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-80 transition">
@@ -660,9 +661,9 @@
     for (let i = 0; i < 25; i++) {
       const node = new THREE.Mesh(nodeGeometry, nodeMaterial);
       node.position.set(
-        (Math.random() - 0.5) * 10,
-        (Math.random() - 0.5) * 10,
-        (Math.random() - 0.5) * 10
+        (Math.random() - 0.5) * 6,
+        (Math.random() - 0.5) * 6,
+        (Math.random() - 0.5) * 6
       );
       scene.add(node);
       shieldNodes.push(node);
