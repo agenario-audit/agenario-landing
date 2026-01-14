@@ -780,6 +780,7 @@
       };
       
       try {
+        console.log('Sending data:', data);
         const response = await fetch('/.netlify/functions/send-email', {
           method: 'POST',
           headers: {
@@ -787,13 +788,17 @@
           },
           body: JSON.stringify(data)
         });
+        console.log('Response status:', response.status);
+        const result = await response.json();
+        console.log('Response data:', result);
         if (response.ok) {
           alert('Message sent successfully!');
           event.target.reset();
         } else {
-          alert('Error sending message.');
+          alert('Error sending message: ' + (result.error || 'Unknown error'));
         }
       } catch (error) {
+        console.log('Fetch error:', error);
         alert('Error sending message.');
       }
     }
