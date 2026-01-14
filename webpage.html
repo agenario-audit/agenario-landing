@@ -769,22 +769,20 @@
       }
     });
 
-    // Resend email send function (Note: API key should not be exposed in client-side code for security reasons. Use server-side instead.)
+    // Secure email send function using serverless API
     async function sendEmail(event) {
       event.preventDefault();
       const formData = new FormData(event.target);
       const data = {
-        from: 'onboarding@resend.dev', // Replace with your verified sender
-        to: 'agenario.audit@gmail.com',
-        subject: 'Contact from Agenario Website',
-        html: `<p>Name: ${formData.get('full_name')}</p><p>Email: ${formData.get('work_email')}</p><p>Company: ${formData.get('company_name')}</p><p>Job Title: ${formData.get('job_title')}</p><p>Project Details: ${formData.get('project_details')}</p>`
+        name: formData.get('full_name'),
+        email: formData.get('work_email'),
+        message: `Company: ${formData.get('company_name')}\nJob Title: ${formData.get('job_title')}\nProject Details: ${formData.get('project_details')}`
       };
       
       try {
-        const response = await fetch('https://api.resend.com/emails', {
+        const response = await fetch('/.netlify/functions/send-email', {
           method: 'POST',
           headers: {
-            'Authorization': 'Bearer YOUR_RESEND_API_KEY', // Replace with your API key (keep secret!)
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(data)
