@@ -3,6 +3,19 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(event, context) {
+  console.log('HTTP Method:', event.httpMethod);
+  // Handle CORS preflight
+  if (event.httpMethod === 'OPTIONS') {
+    return new Response('', {
+      status: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
+    });
+  }
+
   if (event.httpMethod !== 'POST') {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), {
       status: 405,
