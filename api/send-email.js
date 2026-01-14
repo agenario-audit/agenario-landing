@@ -4,29 +4,29 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(event, context) {
   if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      body: JSON.stringify({ error: 'Method not allowed' }),
-    };
+    return new Response(JSON.stringify({ error: 'Method not allowed' }), {
+      status: 405,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   let body;
   try {
     body = JSON.parse(event.body);
   } catch {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error: 'Invalid JSON' }),
-    };
+    return new Response(JSON.stringify({ error: 'Invalid JSON' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   const { name, email, message } = body;
 
   if (!name || !email || !message) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error: 'Missing required fields' }),
-    };
+    return new Response(JSON.stringify({ error: 'Missing required fields' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   try {
@@ -43,15 +43,15 @@ export default async function handler(event, context) {
       `,
     });
     console.log('Email sent successfully:', data);
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ success: true }),
-    };
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
   } catch (error) {
     console.error('Email send error:', error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Failed to send email' }),
-    };
+    return new Response(JSON.stringify({ error: 'Failed to send email' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 }
