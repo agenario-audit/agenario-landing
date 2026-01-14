@@ -14,6 +14,7 @@ export default async function handler(req, res) {
   }
 
   try {
+    console.log('Sending email with data:', { name, email, message });
     const data = await resend.emails.send({
       from: 'Agenario <noreply@agenario.tech>', // Updated to verified domain
       to: 'agenario.audit@gmail.com', // Your email
@@ -25,10 +26,10 @@ export default async function handler(req, res) {
         <p>${message}</p>
       `,
     });
-
+    console.log('Email sent successfully:', data);
     res.status(200).json({ success: true });
   } catch (error) {
-    console.error(error);
+    console.error('Email send error:', error);
     res.status(500).json({ error: 'Failed to send email' });
   }
 }
