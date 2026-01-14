@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://agenario.com/sitemap.xml
+Sitemap: https://agenario.tech/sitemap.xml
