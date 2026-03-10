@@ -3,58 +3,26 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Agenario - AI Auditing and Compliance Agency</title>
+  <title>Agenario Labs – Enterprise AI Systems Agency</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Agenario is your premier AI auditing and compliance agency, ensuring your AI models are safe, ethical, and legally compliant. Protect against risks like prompt injection, hallucinations, and regulatory fines." />
-  <meta name="keywords" content="AI auditing, AI compliance, AI safety, EU AI Act, prompt injection, machine learning security, AI ethics, regulatory compliance, Agenario" />
-  <meta name="author" content="Agenario" />
+  <meta name="description"
+    content="Enterprise-grade AI pipelines, agentic swarms, and governance. We architect, deploy, and stress-test autonomous AI systems for mid-market and enterprise clients, secured by the Agenario red-teaming engine." />
   <meta name="robots" content="index, follow" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpg" href="Agenario.jpg">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Agenario" />
-  <meta property="og:url" content="https://agenario.tech/" />
-  <meta property="og:title" content="Agenario — AI Auditing and Compliance Agency" />
-  <meta property="og:description" content="Leading AI auditing services for compliance, safety, and ethics." />
+  <meta property="og:site_name" content="Agenario Labs" />
+  <meta property="og:title" content="Agenario Labs – Enterprise AI Systems Agency" />
+  <meta property="og:description"
+    content="We don’t build chatbots. We build autonomous systems that scale your business, secured by the Agenario™ red-teaming engine." />
   <meta property="og:image" content="https://agenario.tech/agenario.jpg" />
-  <meta property="og:site_name" content="Agenario" />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:site" content="@agenario_ai" />
-  <meta property="twitter:url" content="https://agenario.tech/" />
-  <meta property="twitter:title" content="Agenario — AI Auditing and Compliance Agency" />
-  <meta property="twitter:description" content="Leading AI auditing services for compliance, safety, and ethics." />
-  <meta property="twitter:image" content="https://agenario.tech/agenario.jpg" />
-  <meta name="twitter:site" content="@agenario_ai" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Agenario",
-    "url": "https://agenario.tech",
-    "logo": "https://agenario.tech/agenario.jpg",
-    "description": "AI auditing and compliance agency ensuring safe, ethical, and legally compliant AI models.",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "",
-      "contactType": "customer service"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/agenario",
-      "https://twitter.com/agenario_ai"
-    ]
-  }
-  </script>
-
-  <!-- Google Fonts -->
+  <!-- Google Fonts - Luxury B2B Theme -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700;800;900&family=Inter:wght@300;400;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
 
   <!-- Tailwind CDN -->
@@ -64,59 +32,71 @@
       theme: {
         extend: {
           colors: {
+            // New dark premium palette
+            baseDark: '#09090b',       // Zinc 950
+            surfaceDark: '#111114',
+            surfaceGlow: '#1a1a24',
+            accentBlur: '#4f46e5',     // Indigo
+            accentViolet: '#7c3aed',   // Violet
+            accentTeal: '#0d9488',     // Teal
+            accentText: '#c7d2fe',     // Indigo 200
+
+            // Old Palette (Kept for Engine section)
             bg: '#18122B',
             primary: '#3A1C71',
             secondary: '#2A9D8F',
-            muted: '#e2e8f0'  // Changed to lighter for better visibility
+            muted: '#e2e8f0',
+            accentBlue: '#38bdf8',
+            accentEmerald: '#22c55e',
+            accentNeutral: '#94a3b8',
           },
           fontFamily: {
-            heading: ['Space Grotesk', 'sans-serif'],
-            sans: ['Inter', 'sans-serif']
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
           },
           boxShadow: {
             glow: '0 0 25px rgba(58,28,113,0.7)',
-            glowCyan: '0 0 25px rgba(42,157,143,0.7)'
+            glowCyan: '0 0 25px rgba(42,157,143,0.7)',
+            'premium-glow': '0 0 40px rgba(124,58,237,0.15)',
+            card: '0 4px 24px rgba(0,0,0,0.4)',
           },
           animation: {
-            pulseGlow: 'pulseGlow 2s infinite'
+            pulseGlow: 'pulseGlow 2s infinite',
+            float: 'float 6s ease-in-out infinite',
           },
           keyframes: {
             pulseGlow: {
               '0%, 100%': { boxShadow: '0 0 25px rgba(58,28,113,0.7)' },
-              '50%': { boxShadow: '0 0 40px rgba(58,28,113,1)' }
+              '50%': { boxShadow: '0 0 40px rgba(58,28,113,1)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
             }
-          }
-        }
-      }
+          },
+        },
+      },
     }
   </script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Three.js -->
+  <!-- Three.js (For Engine Section) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Global + Agenario styles -->
   <style>
     body {
-      background: linear-gradient(135deg, #0f0f23 0%, #18122B 50%, #1a1a2e 100%);
+      background: #09090b;
       overflow-x: hidden;
-      font-family: 'Inter', sans-serif;
-      position: relative;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 20% 80%, rgba(58, 28, 113, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(42, 157, 143, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(255, 69, 0, 0.15) 0%, transparent 50%);
-      pointer-events: none;
-      z-index: -2;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #e4e4e7;
+      /* Zinc 200 */
     }
 
     h1,
@@ -125,130 +105,102 @@
     h4,
     h5,
     h6 {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: 'Outfit', sans-serif;
       color: #ffffff;
-      text-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+      letter-spacing: -0.02em;
     }
 
-    /* Glassmorphism with enhanced glow */
+    .premium-glass {
+      background: rgba(24, 24, 27, 0.4);
+      /* Zinc 900 semi-transparent */
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .premium-card {
+      background: linear-gradient(180deg, rgba(24, 24, 27, 0.7) 0%, rgba(9, 9, 11, 0.9) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .premium-card:hover {
+      border-color: rgba(124, 58, 237, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px -10px rgba(124, 58, 237, 0.15);
+    }
+
+    .premium-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    }
+
+    .text-gradient {
+      background: linear-gradient(to right, #ffffff, #a5b4fc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn-primary:hover::before {
+      opacity: 1;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+    }
+
+    /* Engine Glass + Glow (Preserved) */
     .glass {
-      background: rgba(255, 255, 255, 0.35);
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 5px rgba(58, 28, 113, 0.1);
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 18px 60px rgba(15, 23, 42, 0.9);
       position: relative;
     }
 
     .glass::before {
       content: '';
       position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background: linear-gradient(45deg, rgba(58, 28, 113, 0.5), rgba(42, 157, 143, 0.5), rgba(255, 69, 0, 0.3));
+      inset: -1px;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.15), transparent 60%);
       border-radius: inherit;
       z-index: -1;
-      opacity: 0.5;
-      filter: blur(8px);
+      filter: blur(12px);
     }
 
-    /* Glow effects */
-    .glow-text {
-      text-shadow: 0 0 20px rgba(58, 28, 113, 0.8), 0 0 40px rgba(42, 157, 143, 0.6);
-      animation: glowPulse 3s ease-in-out infinite alternate;
-    }
-
-    @keyframes glowPulse {
-      from {
-        text-shadow: 0 0 20px rgba(58, 28, 113, 0.8), 0 0 40px rgba(42, 157, 143, 0.6);
-      }
-
-      to {
-        text-shadow: 0 0 30px rgba(58, 28, 113, 1), 0 0 60px rgba(42, 157, 143, 0.8);
-      }
-    }
-
-    .glow-btn {
-      transition: all 0.3s ease;
-      background: linear-gradient(45deg, #3A1C71, #2A9D8F);
-      box-shadow: 0 0 25px rgba(58, 28, 113, 0.7);
-    }
-
-    .glow-btn:hover {
-      box-shadow: 0 0 40px rgba(58, 28, 113, 1), 0 0 60px rgba(42, 157, 143, 0.8);
-      transform: translateY(-3px) scale(1.05);
-    }
-
-    .glow-btn-cyan {
-      background: linear-gradient(45deg, #2A9D8F, #3A1C71);
-      box-shadow: 0 0 25px rgba(42, 157, 143, 0.7);
-    }
-
-    .glow-btn-cyan:hover {
-      box-shadow: 0 0 40px rgba(42, 157, 143, 1), 0 0 60px rgba(58, 28, 113, 0.8);
-      transform: translateY(-3px) scale(1.05);
-    }
-
-    /* Timeline with glow */
-    .timeline {
-      position: relative;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      height: 3px;
-      box-shadow: 0 0 5px rgba(58, 28, 113, 0.2);
-    }
-
-    @keyframes timelineGlow {
-      from {
-        box-shadow: 0 0 15px rgba(58, 28, 113, 0.8), 0 0 30px rgba(42, 157, 143, 0.6);
-      }
-
-      to {
-        box-shadow: 0 0 25px rgba(58, 28, 113, 1), 0 0 50px rgba(42, 157, 143, 0.8);
-      }
-    }
-
-    .timeline-step {
-      position: relative;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(25px);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      width: 80px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      box-shadow: 0 0 8px rgba(58, 28, 113, 0.2);
-    }
-
-    /* Three.js Canvas */
-    #threejs-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    /* Icon glow - enhanced */
     .icon-glow {
-      filter: drop-shadow(0 0 10px rgba(42, 157, 143, 1)) drop-shadow(0 0 20px rgba(58, 28, 113, 1));
-      color: #ffffff !important;
-      text-shadow: 0 0 10px rgba(42, 157, 143, 0.8), 0 0 20px rgba(58, 28, 113, 0.6);
+      filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.8));
     }
 
-    /* Animated particles overlay */
     .particle {
       position: absolute;
       width: 4px;
@@ -288,14 +240,14 @@
       }
     }
 
-    /* Marquee styles */
     .marquee-container {
       overflow: hidden;
       width: 100%;
     }
+
     .marquee-row {
       display: flex;
-      width: 2000px; /* Fixed width for smooth scrolling */
+      width: 2000px;
       animation: marquee 20s linear infinite;
     }
 
@@ -303,496 +255,1326 @@
       0% {
         transform: translateX(0);
       }
+
       100% {
         transform: translateX(-50%);
       }
     }
+
+    #threejs-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
   </style>
 </head>
 
-<body class="text-white relative" style="background-color: #18122B;">
+<body class="text-zinc-200 relative antialiased selection:bg-accentViolet selection:text-white">
 
-  <!-- Animated Particles -->
-  <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-  <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
-  <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
-  <div class="particle" style="left: 40%; animation-delay: 6s;"></div>
-  <div class="particle" style="left: 50%; animation-delay: 8s;"></div>
-  <div class="particle" style="left: 60%; animation-delay: 10s;"></div>
-  <div class="particle" style="left: 70%; animation-delay: 12s;"></div>
-  <div class="particle" style="left: 80%; animation-delay: 14s;"></div>
-  <div class="particle" style="left: 90%; animation-delay: 16s;"></div>
+  <!-- ================= AGENCY MAIN APP ROOT ================= -->
+  <div id="agency-root" class="min-h-screen flex flex-col bg-baseDark selection:bg-accentViolet selection:text-white">
 
-  <!-- Three.js Background -->
-  <canvas id="threejs-bg"></canvas>
+    <!-- Sticky Navbar -->
+    <header class="sticky top-0 z-40 border-b border-white/[0.05] premium-glass transition-all duration-300">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Brand -->
+          <button id="nav-home" type="button" class="flex items-center gap-3 group">
+            <img src="./Agenario.jpg" alt="Agenario Logo" class="h-10 w-auto object-contain rounded-md" />
+            <div class="hidden sm:flex flex-col items-start">
+              <span
+                class="text-sm sm:text-base font-semibold leading-tight text-white tracking-wide group-hover:text-accentText transition-colors duration-300">Agenario
+                Labs</span>
+              <span class="text-[10px] text-zinc-500 uppercase tracking-[0.2em] font-medium">Smart
+                Business Automation</span>
+            </div>
+          </button>
 
-  <!-- Floating Navigation -->
-  <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 glass rounded-full px-6 py-3 w-[95%] max-w-5xl shadow-2xl transition-all duration-300" id="navbar">
-    <div class="flex items-center justify-between">
-      
-      <a href="#" class="flex items-center space-x-3 group">
-        <img src="Agenario.jpg" alt="Agenario" class="h-10 w-10 rounded-full border-2 border-white/20 group-hover:border-secondary transition">
-        <span class="text-xl font-extrabold tracking-wide text-white">Agenario</span>
-      </a>
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <button class="text-zinc-400 hover:text-white transition-colors duration-300" data-nav-section="home"
+              type="button">
+              Home
+            </button>
+            <!-- Services Dropdown Placeholder (To be filled in next step from User) -->
+            <div class="relative" id="services-dropdown-container">
+              <button
+                class="text-zinc-400 hover:text-white transition-colors duration-300 flex items-center gap-1 py-1 focus:outline-none"
+                type="button"
+                onclick="document.getElementById('services-mega-menu').classList.toggle('hidden'); document.addEventListener('click', function closeMenu(e) { if(!e.target.closest('#services-dropdown-container')) { document.getElementById('services-mega-menu').classList.add('hidden'); document.removeEventListener('click', closeMenu); } })"
+                id="services-menu-btn">
+                Our Services <i class="fa-solid fa-chevron-down text-[10px] opacity-70"></i>
+              </button>
 
-      <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-        <a href="#risk" class="text-gray-300 hover:text-white transition hover:scale-105">The Risk</a>
-        <a href="#process" class="text-gray-300 hover:text-white transition hover:scale-105">Process</a>
-        <a href="#about" class="text-gray-300 hover:text-white transition hover:scale-105">About</a>
+              <!-- Mega Menu -->
+              <div id="services-mega-menu"
+                class="hidden absolute top-full left-0 mt-2 w-[550px] premium-card rounded-xl border border-white/10 flex z-50 shadow-2xl overflow-hidden cursor-default text-left bg-zinc-900/95 backdrop-blur-xl">
+                <div class="grid grid-cols-2 p-2                            <!-- Service 1 -->
+                            <a href=" services/ai-customer-operations.html"
+                  class="group/item flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
+                  <div
+                    class="flex-shrink-0 h-10 w-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center group-hover/item:border-indigo-500/40 transition-colors">
+                    <i class="fa-solid fa-headset text-indigo-400"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-semibold text-white group-hover/item:text-indigo-400 transition-colors">
+                      AI Reception & Leads
+                    </p>
+                    <p class="text-[11px] text-zinc-400 mt-0.5 leading-snug">
+                      24/7 call answering, instant booking, and automated lead follow-up.
+                    </p>
+                  </div>
+                  </a>
+
+                  <!-- Service 2 -->
+                  <a href="services/ai-operations-automation.html"
+                    class="group/item flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
+                    <div
+                      class="flex-shrink-0 h-10 w-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center group-hover/item:border-purple-500/40 transition-colors">
+                      <i class="fa-solid fa-gears text-purple-400"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm font-semibold text-white group-hover/item:text-purple-400 transition-colors">
+                        Automated Admin
+                      </p>
+                      <p class="text-[11px] text-zinc-400 mt-0.5 leading-snug">
+                        Eliminate manual data entry, optimize billing, and automate paperwork.
+                      </p>
+                    </div>
+                  </a>
+
+                  <!-- Service 3 -->
+                  <a href="services/ai-knowledge-systems.html"
+                    class="group/item flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
+                    <div
+                      class="flex-shrink-0 h-10 w-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center group-hover/item:border-teal-500/40 transition-colors">
+                      <i class="fa-solid fa-brain text-teal-400"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm font-semibold text-white group-hover/item:text-teal-400 transition-colors">
+                        Instant Support Bots
+                      </p>
+                      <p class="text-[11px] text-zinc-400 mt-0.5 leading-snug">
+                        Smart website assistants that confidently answer your customer questions instantly.
+                      </p>
+                    </div>
+                  </a>
+
+                  <!-- Service 4 -->
+                  <a href="services/ai-infrastructure.html"
+                    class="group/item flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
+                    <div
+                      class="flex-shrink-0 h-10 w-10 rounded-lg bg-zinc-700/30 border border-zinc-600/50 flex items-center justify-center group-hover/item:border-zinc-400/50 transition-colors">
+                      <i class="fa-solid fa-shield-halved text-zinc-300"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm font-semibold text-white group-hover/item:text-zinc-300 transition-colors">
+                        Secure Setup & Safety
+                      </p>
+                      <p class="text-[11px] text-zinc-400 mt-0.5 leading-snug">
+                        Guaranteed reliable, heavily tested AI architectures that won't make mistakes.
+                      </p>
+                    </div>
+                  </a>button id="nav-agenario"
+                  class="text-zinc-400 hover:text-accentText transition-colors duration-300 flex items-center gap-2"
+                  type="button">
+                  <i class="fa-solid fa-shield-halved text-[10px] text-accentViolet"></i>
+                  Security Engine
+                  </button>
+                  <button
+                    class="btn-primary rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide transition-all"
+                    data-nav-section="book-audit" type="button">
+                    Book an Audit
+                  </button>
+          </nav>
+
+          <!-- Mobile menu button -->
+          <button
+            class="md:hidden inline-flex items-center justify-center rounded-lg border border-white/10 bg-surfaceDark p-2 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors"
+            id="agency-mobile-toggle" type="button">
+            <span class="sr-only">Open main menu</span>
+            <svg id="agency-icon-open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="agency-icon-close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div id="agency-mobile-menu" class="md:hidden hidden border-t border-white/10 pb-4 pt-2">
+          <div class="flex flex-col gap-1 text-sm font-medium">
+            <button
+              class="text-left px-3 py-3 rounded-lg text-zinc-400 hover:text-white hover:bg-surfaceDark transition-colors"
+              data-nav-section="home" type="button">
+              Home
+            </button>
+            <button
+              class="text-left px-3 py-3 rounded-lg text-zinc-400 hover:text-white hover:bg-surfaceDark transition-colors"
+              data-nav-section="services" type="button">
+              Capabilities
+            </button>
+            <button id="mobile-nav-agenario"
+              class="text-left px-3 py-3 rounded-lg text-zinc-400 hover:text-accentText hover:bg-surfaceDark transition-colors flex items-center gap-2"
+              type="button">
+              <i class="fa-solid fa-shield-halved text-[10px] text-accentViolet"></i>
+              Security Engine
+            </button>
+            <button
+              class="mt-2 text-center btn-primary rounded-lg px-4 py-3 text-xs font-semibold transition-all w-full"
+              data-nav-section="book-audit" type="button">
+              Book an Audit
+            </button>
+          </div>
+        </div>
       </div>
+    </header>
 
-      <div class="flex items-center space-x-4">
-        <a href="#contact" class="hidden md:inline-block bg-primary px-5 py-2 rounded-full text-sm font-bold text-white hover:bg-opacity-80 hover:shadow-glow transition transform hover:-translate-y-0.5">
-          Get Audit
+    <!-- ========= MAIN CONTENT ========= -->
+    <main class="flex-1">
+      <!-- HERO -->
+      <section id="home" class="relative overflow-hidden pt-16 pb-24 sm:pt-24 sm:pb-32">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 -z-10 bg-baseDark overflow-hidden pointer-events-none">
+          <!-- Animated Ambient Background Layer -->
+          <div
+            class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-indigo-600/10 blur-[120px] mix-blend-screen animate-[pulse_8s_ease-in-out_infinite]">
+          </div>
+          <div
+            class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-teal-600/10 blur-[100px] mix-blend-screen animate-[pulse_10s_ease-in-out_infinite_reverse]">
+          </div>
+          <!-- Fine grid overlay -->
+          <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBNMzAuNSAwcTguNSAzOS41IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-30 [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)]">
+          </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div class="grid lg:grid-cols-[1.2fr,1fr] gap-12 lg:gap-16 items-center">
+
+            <!-- Hero Copy -->
+            <div class="relative z-10">
+              <div class="mb-6">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-500 mb-1">Your Virtual Workforce
+                </p>
+                <p class="text-sm font-semibold text-zinc-100 flex items-center gap-2">
+                  <i class="fa-solid fa-users text-indigo-500 text-xs"></i> 24/7 Automated Growth Engine
+                </p>
+              </div>
+
+              <h1 class="text-4xl sm:text-5xl lg:text-[4rem] leading-[1.1] font-bold tracking-tight text-white mb-6">
+                Stop Missing Calls.<br />
+                <span class="text-gradient">Put Your Business on Autopilot</span><br />
+                And Scale Securely.
+              </h1>
+
+              <p class="text-base sm:text-lg text-zinc-400 max-w-xl font-light leading-relaxed mb-8">
+                We build reliable, custom AI receptionists, booking agents, and back-office bots that answer your phones
+                24/7, book your clients instantly, and handle repetitive admin work—so you can focus strictly on growth.
+              </p>
+
+              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <button type="button" data-nav-section="book-audit"
+                  class="w-full sm:w-auto btn-primary rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide flex items-center justify-center gap-2 group hover:scale-[1.02] transition-transform">
+                  Get Your Free Assessment
+                  <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                </button>
+                <button type="button" data-nav-section="services"
+                  class="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-zinc-700 bg-surfaceDark px-8 py-3.5 text-sm font-medium text-zinc-300 hover:text-white hover:border-zinc-500 hover:bg-zinc-800 transition-all">
+                  Explore Capabilities
+                </button>
+              </div>
+
+              <div class="mt-10 flex flex-wrap items-center gap-6 text-sm text-zinc-400 font-medium">
+                <a href="https://govira.tech" target="_blank"
+                  class="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-indigo-500/50 transition-all text-white group">
+                  <i class="fa-solid fa-handshake text-indigo-400"></i>
+                  <span>A <span
+                      class="font-bold text-base tracking-wide group-hover:text-indigo-400 transition-colors">Govira.tech</span></span>
+                </a>
+                <div class="flex items-center gap-2 text-indigo-400/80">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>Secured by Agenario™</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Visual (Premium Redesign) -->
+            <div class="relative lg:ml-auto w-full max-w-lg mx-auto lg:max-w-none perspective-1000">
+              <!-- Glow behind card -->
+              <div class="absolute inset-0 bg-accentViolet opacity-[0.15] blur-[100px] rounded-full"></div>
+              <div class="absolute top-1/4 right-1/4 bg-accentTeal opacity-[0.15] blur-[80px] w-64 h-64 rounded-full">
+              </div>
+
+              <div class="relative p-6 sm:p-8 animate-float z-10">
+
+                <!-- Master Central Core -->
+                <div class="relative w-full aspect-square max-w-[400px] mx-auto flex items-center justify-center">
+
+                  <!-- Orbit Rings -->
+                  <div
+                    class="absolute inset-0 border border-white/5 rounded-full scale-[0.8] animate-[spin_40s_linear_infinite]">
+                  </div>
+                  <div
+                    class="absolute inset-0 border border-indigo-500/20 rounded-full scale-[0.6] animate-[spin_30s_linear_infinite_reverse]">
+                  </div>
+                  <div
+                    class="absolute inset-0 border border-teal-500/20 rounded-full scale-[0.4] animate-[spin_20s_linear_infinite]">
+                  </div>
+
+                  <!-- Central Core Node -->
+                  <div
+                    class="relative z-20 w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500 via-purple-600 to-baseDark flex flex-col items-center justify-center shadow-[0_0_40px_rgba(99,102,241,0.5)] border border-white/20">
+                    <i class="fa-solid fa-bolt text-2xl text-white mb-1 shadow-glow"></i>
+                    <span class="text-[9px] font-bold tracking-[0.2em] text-white uppercase">Growth</span>
+                  </div>
+
+                  <!-- Orbiting Elements (Categories) -->
+                  <!-- Sales -->
+                  <div class="absolute top-[5%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-30">
+                    <div
+                      class="premium-glass px-4 py-2 rounded-xl flex items-center gap-2 border-indigo-500/30 hover:scale-105 transition-transform cursor-default">
+                      <div class="h-6 w-6 rounded-full bg-indigo-500/20 flex items-center justify-center">
+                        <i class="fa-solid fa-chart-line text-indigo-400 text-xs"></i>
+                      </div>
+                      <div>
+                        <p class="text-[10px] font-bold text-white uppercase tracking-wider">
+                          Bookings</p>
+                        <p class="text-[8px] text-zinc-400">Never Miss a Call</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Support -->
+                  <div class="absolute bottom-[20%] right-[-5%] z-30">
+                    <div
+                      class="premium-glass px-4 py-2 rounded-xl flex items-center gap-2 border-teal-500/30 hover:scale-105 transition-transform cursor-default">
+                      <div class="h-6 w-6 rounded-full bg-teal-500/20 flex items-center justify-center">
+                        <i class="fa-solid fa-headset text-teal-400 text-xs"></i>
+                      </div>
+                      <div>
+                        <p class="text-[10px] font-bold text-white uppercase tracking-wider">
+                          Customers</p>
+                        <p class="text-[8px] text-zinc-400">Instant Answers</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Logic -->
+                  <div class="absolute bottom-[10%] left-[0%] z-30">
+                    <div
+                      class="premium-glass px-4 py-2 rounded-xl flex items-center gap-2 border-purple-500/30 hover:scale-105 transition-transform cursor-default">
+                      <div class="h-6 w-6 rounded-full bg-purple-500/20 flex items-center justify-center">
+                        <i class="fa-solid fa-brain text-purple-400 text-xs"></i>
+                      </div>
+                      <div>
+                        <p class="text-[10px] font-bold text-white uppercase tracking-wider">Admin
+                        </p>
+                        <p class="text-[8px] text-zinc-400">Automated Filing</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Enhanced Dynamic Grid Network Connections -->
+                  <svg class="absolute inset-0 w-full h-full -z-10 pointer-events-none" viewBox="0 0 400 400">
+                    <defs>
+                      <!-- Complex glowing gradients -->
+                      <linearGradient id="flowTop" x1="0.5" y1="0.5" x2="0.5" y2="0.125">
+                        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.9" />
+                        <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1" />
+                      </linearGradient>
+                      <linearGradient id="flowRight" x1="0.5" y1="0.5" x2="0.8" y2="0.7">
+                        <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.9" />
+                        <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.5" />
+                        <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.1" />
+                      </linearGradient>
+                      <linearGradient id="flowLeft" x1="0.5" y1="0.5" x2="0.2" y2="0.7">
+                        <stop offset="0%" stop-color="#ec4899" stop-opacity="0.9" />
+                        <stop offset="100%" stop-color="#6366f1" stop-opacity="0.1" />
+                      </linearGradient>
+                      <linearGradient id="perimeter" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4" />
+                        <stop offset="33%" stop-color="#14b8a6" stop-opacity="0.4" />
+                        <stop offset="66%" stop-color="#ec4899" stop-opacity="0.4" />
+                        <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.4" />
+                      </linearGradient>
+                      <filter id="hyperGlow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="8" result="blur" />
+                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                      </filter>
+                      <pattern id="hexGrid" width="20" height="34.64" patternUnits="userSpaceOnUse"
+                        patternTransform="scale(0.5)">
+                        <path d="M10 0 L20 5.77 L20 17.32 L10 23.09 L0 17.32 L0 5.77 Z" fill="none"
+                          stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+                        <path d="M10 34.64 L20 28.87 L20 17.32 L10 11.55 L0 17.32 L0 28.87 Z" fill="none"
+                          stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+                      </pattern>
+                    </defs>
+
+                    <!-- Hex Grid Background -->
+                    <rect width="100%" height="100%" fill="url(#hexGrid)" />
+
+                    <!-- Internal Perimeter Web (Connecting the outer nodes to form the triangle) -->
+                    <path d="M200 50 L320 280 L80 280 Z" stroke="url(#perimeter)" stroke-width="1"
+                      stroke-dasharray="2 4" fill="rgba(20, 184, 166, 0.02)" />
+                    <!-- Inner secondary triangle for depth -->
+                    <path d="M200 100 L280 240 L120 240 Z" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"
+                      stroke-dasharray="1 3" fill="none" />
+
+                    <!-- Primary Power Lines from Center to Nodes -->
+                    <path d="M200 200 L200 50" stroke="url(#flowTop)" stroke-width="2.5" fill="none"
+                      filter="url(#hyperGlow)" />
+                    <path d="M200 200 L320 280" stroke="url(#flowRight)" stroke-width="2.5" fill="none"
+                      filter="url(#hyperGlow)" />
+                    <path d="M200 200 L80 280" stroke="url(#flowLeft)" stroke-width="2.5" fill="none"
+                      filter="url(#hyperGlow)" />
+
+                    <!-- Data Nodes (Intersections) -->
+                    <circle cx="200" cy="100" r="3" fill="#fff" opacity="0.4" />
+                    <circle cx="280" cy="240" r="3" fill="#fff" opacity="0.4" />
+                    <circle cx="120" cy="240" r="3" fill="#fff" opacity="0.4" />
+
+                    <!-- High-Speed Data Packets (Pulsing and moving to simulate transfer) -->
+                    <circle r="4" fill="#60a5fa" filter="url(#hyperGlow)">
+                      <animateMotion dur="2.5s" repeatCount="indefinite" path="M200 200 L200 50" keyPoints="0;1"
+                        keyTimes="0;1" calcMode="spline" keySplines="0.4 0 0.2 1" />
+                      <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" />
+                    </circle>
+
+                    <circle r="4" fill="#2dd4bf" filter="url(#hyperGlow)">
+                      <animateMotion dur="3s" repeatCount="indefinite" path="M200 200 L320 280" keyPoints="0;1"
+                        keyTimes="0;1" calcMode="spline" keySplines="0.4 0 0.2 1" />
+                      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" />
+                    </circle>
+
+                    <circle r="4" fill="#f472b6" filter="url(#hyperGlow)">
+                      <animateMotion dur="2.8s" repeatCount="indefinite" path="M200 200 L80 280" keyPoints="0;1"
+                        keyTimes="0;1" calcMode="spline" keySplines="0.4 0 0.2 1" />
+                      <animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite" />
+                    </circle>
+
+                    <!-- Reverse Data Packets (Simulating communication back to core) -->
+                    <circle r="2" fill="#fff">
+                      <animateMotion dur="4s" repeatCount="indefinite" path="M320 280 L200 200" />
+                      <animate attributeName="opacity" values="0;0.5;0" dur="4s" repeatCount="indefinite" />
+                    </circle>
+                    <circle r="2" fill="#fff">
+                      <animateMotion dur="4s" repeatCount="indefinite" path="M80 280 L200 200" begin="1s" />
+                      <animate attributeName="opacity" values="0;0.5;0" dur="4s" repeatCount="indefinite" />
+                    </circle>
+
+                  </svg>
+                </div>
+
+                <div
+                  class="mt-8 text-center bg-zinc-900/50 backdrop-blur border border-white/5 rounded-2xl p-4 shadow-xl">
+                  <p class="text-sm font-semibold text-white mb-1"><span class="text-gradient">Grow Your
+                      Business</span> Automatically</p>
+                  <p class="text-xs text-zinc-400">We replace bottlenecks with smart assistants.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 CORE CAPABILITIES -->
+      <section id="services" class="py-24 border-t border-white/[0.03] bg-surfaceDark relative overflow-hidden">
+        <!-- Minimal subtle glow -->
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-indigo-600/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              What We Can Automate For You
+            </h2>
+            <p class="text-base text-zinc-400">
+              We build custom AI agents that work alongside your team, handling the repetitive tasks so you
+              can focus on growing your business.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 md:grid-cols-2">
+            <!-- 1 -->
+            <article
+              class="premium-card p-8 rounded-2xl group cursor-default hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-500">
+              <div
+                class="absolute -top-10 -right-10 w-32 h-32 bg-indigo-500/20 blur-[50px] group-hover:bg-indigo-500/40 transition-colors duration-500">
+              </div>
+              <div class="mb-6 flex justify-between items-start">
+                <div
+                  class="h-10 w-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
+                  <i class="fa-solid fa-headset text-indigo-400"></i>
+                </div>
+                <span
+                  class="text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 border border-white/10 rounded px-2 py-0.5 bg-white/5">Frontline</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Never Miss Another Call</h3>
+              <p class="text-sm text-zinc-400 mb-6">Our intelligent voice agents answer the phone instantly, 24/7,
+                treating every caller like a VIP.</p>
+              <ul class="space-y-3 text-sm text-zinc-300">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-indigo-400"></i> AI
+                  Voice
+                  Receptionists (24/7 Phone Answering)</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-indigo-400"></i>
+                  Automatic
+                  Appointment Scheduling</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-indigo-400"></i>
+                  Outbound Calls to
+                  Qualify Leads</li>
+              </ul>
+            </article>
+
+            <!-- 2 -->
+            <article
+              class="premium-card p-8 rounded-2xl group cursor-default hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-500">
+              <div
+                class="absolute -top-10 -right-10 w-32 h-32 bg-purple-500/20 blur-[50px] group-hover:bg-purple-500/40 transition-colors duration-500">
+              </div>
+              <div class="mb-6 flex justify-between items-start">
+                <div
+                  class="h-10 w-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
+                  <i class="fa-solid fa-gears text-purple-400"></i>
+                </div>
+                <span
+                  class="text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 border border-white/10 rounded px-2 py-0.5 bg-white/5">Back
+                  Office</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Put Admin on Autopilot</h3>
+              <p class="text-sm text-zinc-400 mb-6">Stop wasting hours on repetitive data entry. We automate your
+                back-office completely.</p>
+              <ul class="space-y-3 text-sm text-zinc-300">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-purple-400"></i>
+                  Automatic Invoice &
+                  Receipt Processing</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-purple-400"></i>
+                  Client Onboarding
+                  Forms Automation</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-purple-400"></i>
+                  Sync Data Across
+                  Your Software Instantly</li>
+              </ul>
+            </article>
+
+            <!-- 3 -->
+            <article
+              class="premium-card p-8 rounded-2xl group cursor-default hover:border-teal-500/50 hover:shadow-[0_0_30px_rgba(20,184,166,0.15)] transition-all duration-500">
+              <div
+                class="absolute -top-10 -right-10 w-32 h-32 bg-teal-500/20 blur-[50px] group-hover:bg-teal-500/40 transition-colors duration-500">
+              </div>
+              <div class="mb-6 flex justify-between items-start">
+                <div
+                  class="h-10 w-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center">
+                  <i class="fa-solid fa-database text-teal-400"></i>
+                </div>
+                <span
+                  class="text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 border border-white/10 rounded px-2 py-0.5 bg-white/5">Intelligence</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Instant Customer Support</h3>
+              <p class="text-sm text-zinc-400 mb-6">Give your frequent callers and website visitors immediate answers to
+                their common questions.</p>
+              <ul class="space-y-3 text-sm text-zinc-300">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-teal-400"></i>
+                  Smart Website Chatbots
+                  that Actually Work</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-teal-400"></i>
+                  Automated Email &
+                  WhatsApp Replies</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-teal-400"></i>
+                  Internal Knowledge
+                  Base for Your Staff</li>
+              </ul>
+            </article>
+
+            <!-- 4 -->
+            <article
+              class="premium-card p-8 rounded-2xl group cursor-default hover:border-zinc-400/50 hover:shadow-[0_0_30px_rgba(161,161,170,0.15)] transition-all duration-500">
+              <div
+                class="absolute -top-10 -right-10 w-32 h-32 bg-zinc-500/20 blur-[50px] group-hover:bg-zinc-500/40 transition-colors duration-500">
+              </div>
+              <div class="mb-6 flex justify-between items-start">
+                <div
+                  class="h-10 w-10 rounded-lg bg-zinc-700/30 border border-zinc-600/50 flex items-center justify-center">
+                  <i class="fa-solid fa-server text-zinc-300"></i>
+                </div>
+                <span
+                  class="text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 border border-white/10 rounded px-2 py-0.5 bg-white/5">Safety
+                  & Management</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">100% Secure System</h3>
+              <p class="text-sm text-zinc-400 mb-6">You always hold the keys. Track what your AI does, review call logs,
+                and protect your privacy.</p>
+              <ul class="space-y-3 text-sm text-zinc-300">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-zinc-400"></i> Full
+                  Dashboard to See
+                  AI Actions</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-zinc-400"></i>
+                  Strict Privacy for
+                  Customer Data</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[10px] mt-1 text-zinc-400"></i> Easy
+                  "Human Handoff"
+                  When Needed</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- AGENARIO MOAT -->
+      <section id="agenario-moat" class="py-24 border-t border-white/[0.03] bg-baseDark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-[1.2fr,1fr] gap-16 items-center">
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.2em] text-indigo-400 font-medium mb-3">Your Dependable
+                Employee
+              </p>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+                Reliable, Secure & <span class="text-gradient">Always On Brand.</span>
+              </h2>
+              <p class="text-base text-zinc-400 mb-8 leading-relaxed">
+                Unlike basic chatbots that give wrong answers or confuse your customers, our AI systems are rigorously
+                trained exclusively on your business rules. If it doesn't know the answer, it seamlessly transfers the
+                customer to a real human on your team.
+              </p>
+              <ul class="space-y-4 text-sm text-zinc-300 mb-8">
+                <li class="flex gap-4 p-3 rounded-lg border border-white/5 bg-white/[0.02]">
+                  <div class="mt-0.5"><i class="fa-solid fa-lock text-indigo-400"></i></div>
+                  <div>
+                    <strong class="block text-white mb-1">100% Data Privacy</strong>
+                    <span class="text-zinc-500 text-xs text-balance">Your client data and business information is kept
+                      entirely secure and never shared.</span>
+                  </div>
+                </li>
+                <li class="flex gap-4 p-3 rounded-lg border border-white/5 bg-white/[0.02]">
+                  <div class="mt-0.5"><i class="fa-solid fa-clipboard-check text-indigo-400"></i></div>
+                  <div>
+                    <strong class="block text-white mb-1">Strict Quality Control</strong>
+                    <span class="text-zinc-500 text-xs text-balance">The AI strictly follows your pricing, your rules,
+                      and your tone of voice. No guessing.</span>
+                  </div>
+                </li>
+              </ul>
+
+              <button type="button" data-nav-section="book-audit"
+                class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-indigo-400 transition-colors group">
+                Find out how we protect your business
+                <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+              </button>
+            </div>
+
+            <div class="relative flex items-center justify-center lg:ml-auto w-full max-w-sm">
+              <div class="absolute inset-0 bg-indigo-500/10 blur-[80px] rounded-full delay-150 animate-pulse"></div>
+              <div
+                class="relative z-10 p-8 text-center premium-card rounded-3xl border border-white/5 w-full hover:border-indigo-400/50 transition-colors">
+                <div
+                  class="inline-flex h-20 w-20 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 items-center justify-center mb-6 shadow-[0_0_30px_rgba(99,102,241,0.2)]">
+                  <i class="fa-solid fa-shield-check text-4xl text-indigo-400"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-white tracking-wide mb-2">Agenario Guards</h3>
+                <p class="text-sm text-zinc-400">Continuous 24/7 monitoring ensures your AI always acts professionally.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOK AN AUDIT -->
+      <section id="book-audit" class="py-24 border-t border-white/[0.03] bg-surfaceDark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-16 lg:grid-cols-[1fr,1.1fr] items-start">
+
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+              Find out how much you can save.
+            </h2>
+            <p class="text-base text-zinc-400 mb-8 leading-relaxed">
+              We analyze your business to find the repetitive tasks that are costing you the most time and money, and
+              show you exactly how our AI systems can automate them for you.
+            </p>
+            <div class="pl-4 border-l-2 border-indigo-500/50 space-y-4">
+              <p class="text-sm text-zinc-300"><span class="text-white font-semibold">1. Free Initial Call.</span> We
+                learn about your current bottlenecks and struggles.</p>
+              <p class="text-sm text-zinc-300"><span class="text-white font-semibold">2. Custom AI Plan.</span> We
+                design a simple, effective AI solution for your specific needs.</p>
+              <p class="text-sm text-zinc-300"><span class="text-white font-semibold">3. Clear Results.</span> We show
+                you exactly how much time and money the system will save you.</p>
+            </div>
+
+          </div>
+
+          <div
+            class="premium-card rounded-2xl p-8 sm:p-10 border border-white/5 hover:border-indigo-500/30 transition-colors">
+            <h3 class="text-xl font-semibold text-white mb-2">Find Out How Much You Can Save</h3>
+            <p class="text-xs text-zinc-500 mb-8">We will review your business and reply within 24 hours.</p>
+
+            <form action="https://formsubmit.co/pranav@agenario.tech" method="POST" class="space-y-5">
+              <!-- FormSubmit config -->
+              <input type="hidden" name="_subject" value="New Agenario Audit Request">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-[10px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">Full
+                    Name</label>
+                  <input type="text" name="full_name" required
+                    class="w-full bg-baseDark/50 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                    placeholder="Ada Lovelace" />
+                </div>
+                <div>
+                  <label class="block text-[10px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">Work
+                    Email</label>
+                  <input type="email" name="work_email" required
+                    class="w-full bg-baseDark/50 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                    placeholder="ada@company.com" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-[10px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">Company
+                    Name</label>
+                  <input type="text" name="company_name" required
+                    class="w-full bg-baseDark/50 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                    placeholder="Acme Logistics" />
+                </div>
+                <div>
+                  <label class="block text-[10px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">Role
+                    / Title</label>
+                  <input type="text" name="job_title" required
+                    class="w-full bg-baseDark/50 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                    placeholder="Director of Engineering" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[10px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">What do you
+                  need help with?</label>
+                <textarea name="project_details" required rows="3"
+                  class="w-full bg-baseDark/50 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all resize-none"
+                  placeholder="Briefly describe the tasks you want to automate..."></textarea>
+              </div>
+
+              <button type="submit"
+                class="w-full btn-primary rounded-lg py-3.5 text-sm font-semibold tracking-wide transition-all mt-2">
+                Submit Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="border-t border-white/[0.05] bg-baseDark py-10">
+        <div
+          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-3">
+            <div class="h-6 w-6 rounded border border-white/10 bg-white/5 flex items-center justify-center">
+              <span class="text-[9px] font-bold text-white">AG</span>
+            </div>
+            <span class="text-xs text-zinc-500 font-medium">© 2026 Agenario Labs. A <a href="https://govira.tech"
+                target="_blank" class="text-indigo-400 hover:text-indigo-300 transition-colors">Govira.tech</a> Company.
+              All
+              rights reserved.</span>
+          </div>
+          <div class="flex items-center gap-6">
+            <span class="text-xs text-zinc-500">Scale operations securely.</span>
+            <button type="button" data-nav-section="book-audit"
+              class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition-colors">
+              Initiate Audit →
+            </button>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <!-- ================= AGENARIO SECURITY ENGINE (OLD SITE WRAPPED) ================= -->
+  <section id="agenario-engine" class="hidden">
+    <!-- Animated Particles -->
+    <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+    <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+    <div class="particle" style="left: 40%; animation-delay: 6s;"></div>
+    <div class="particle" style="left: 50%; animation-delay: 8s;"></div>
+    <div class="particle" style="left: 60%; animation-delay: 10s;"></div>
+    <div class="particle" style="left: 70%; animation-delay: 12s;"></div>
+    <div class="particle" style="left: 80%; animation-delay: 14s;"></div>
+    <div class="particle" style="left: 90%; animation-delay: 16s;"></div>
+
+    <!-- Three.js Background -->
+    <canvas id="threejs-bg"></canvas>
+
+    <!-- Floating Navigation -->
+    <nav
+      class="fixed top-6 left-1/2 -translate-x-1/2 z-50 glass rounded-full px-6 py-3 w-[95%] max-w-5xl shadow-2xl transition-all duration-300"
+      id="agenario-navbar">
+      <div class="flex items-center justify-between">
+        <a href="#" class="flex items-center space-x-3 group">
+          <img src="Agenario.jpg" alt="Agenario"
+            class="h-10 w-10 rounded-full border-2 border-white/20 group-hover:border-secondary transition">
+          <span class="text-xl font-extrabold tracking-wide text-white">Agenario</span>
         </a>
 
-        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#risk" class="text-gray-300 hover:text-white transition hover:scale-105">The Risk</a>
+          <a href="#process" class="text-gray-300 hover:text-white transition hover:scale-105">Process</a>
+          <a href="#about" class="text-gray-300 hover:text-white transition hover:scale-105">About</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <button type="button" onclick="showAgency()"
+            class="hidden md:inline-block border border-white/20 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-white/10 transition">
+            <i class="fa-solid fa-arrow-left mr-2"></i> Agenario Labs
+          </button>
+          <a href="#contact"
+            class="hidden md:inline-block bg-primary px-5 py-2 rounded-full text-sm font-bold text-white hover:bg-opacity-80 hover:shadow-glow transition transform hover:-translate-y-0.5">
+            Get Audit
+          </a>
+
+          <button id="agenario-mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full mt-4 bg-bg/95 backdrop-blur-xl rounded-2xl p-6 border border-white/10 flex-col space-y-4 text-center shadow-2xl">
-      <a href="#risk" class="block text-white text-lg font-medium py-2 hover:text-secondary transition" onclick="toggleMobileMenu()">The Risk</a>
-      <a href="#process" class="block text-white text-lg font-medium py-2 hover:text-secondary transition" onclick="toggleMobileMenu()">Process</a>
-      <a href="#about" class="block text-white text-lg font-medium py-2 hover:text-secondary transition" onclick="toggleMobileMenu()">About</a>
-      <a href="#contact" class="block bg-primary py-3 rounded-xl text-white font-bold shadow-lg hover:bg-opacity-80 transition" onclick="toggleMobileMenu()">Get Audit Report</a>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="min-h-screen flex items-center justify-center text-center px-6">
-    <div class="max-w-4xl mt-32">
-      <h1 class="text-5xl md:text-7xl font-black leading-tight text-white">
-        Are you from Europe? <span class="text-secondary">Get a Compliance Check for your AI Agent</span>
-      </h1>
-      <p class="mt-6 text-lg text-muted max-w-2xl mx-auto">
-        We automate stress-testing to detect prompt injections, hallucinations, and non-compliance before you deploy.
-      </p>
-      <div class="mt-10">
+      <div id="agenario-mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 w-full mt-4 bg-bg/95 backdrop-blur-xl rounded-2xl p-6 border border-white/10 flex-col space-y-4 text-center shadow-2xl">
+        <button type="button" onclick="showAgency(); agenarioToggleMobileMenu();"
+          class="block w-full text-indigo-400 text-lg font-bold py-2 border-b border-white/10 hover:text-indigo-300 transition">←
+          Back to Agenario Labs</button>
+        <a href="#risk" class="block text-white text-lg font-medium py-2 hover:text-secondary transition"
+          onclick="agenarioToggleMobileMenu()">The Risk</a>
+        <a href="#process" class="block text-white text-lg font-medium py-2 hover:text-secondary transition"
+          onclick="agenarioToggleMobileMenu()">Process</a>
+        <a href="#about" class="block text-white text-lg font-medium py-2 hover:text-secondary transition"
+          onclick="agenarioToggleMobileMenu()">About</a>
         <a href="#contact"
-          class="inline-block glow-btn px-10 py-4 rounded-xl font-semibold text-lg transition">
-          Get Compliance Check With EU AI Act
-        </a>
+          class="block bg-primary py-3 rounded-xl text-white font-bold shadow-lg hover:bg-opacity-80 transition"
+          onclick="agenarioToggleMobileMenu()">Get Audit Report</a>
       </div>
-      <p class="mt-6 text-sm text-muted">
-        Trusted by AI Agencies & Enterprises for Regulatory Safety.
-      </p>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Industry Recognition -->
-  <section class="max-w-4xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-extrabold text-center mb-12 text-white">
-      Industry Recognition
-    </h2>
-    <div class="glass rounded-2xl p-8 text-center max-w-2xl mx-auto">
-      <div class="flex justify-center mb-4">
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-        <i class="fas fa-star text-yellow-400"></i>
-      </div>
-      <blockquote class="text-lg text-muted mb-6 italic">
-        "Tools like Agenario that stress-test AI agents for hidden risks are critical—especially with regulations like the EU AI Act approaching."
-      </blockquote>
-      <cite class="text-sm text-muted">
-        Techgropse || Next-Gen AI Services
-      </cite>
-      <div class="flex justify-center mt-4">
-        <i class="fab fa-linkedin text-secondary text-2xl"></i>
-        <span class="ml-2 text-sm text-muted">LinkedIn Verified</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- The Threat Landscape -->
-  <section id="risk" class="max-w-7xl mx-auto px-6 py-24">
-    <h2 class="text-4xl font-extrabold text-center mb-16 text-white">
-      The Infinite Attack Surface
-    </h2>
-    <div class="marquee-container">
-      <div class="marquee-row">
-        <div class="glass rounded-2xl p-8 flex-shrink-0 w-80 mx-4">
-          <i class="fa-solid fa-gavel text-secondary text-3xl icon-glow"></i>
-          <h3 class="mt-4 text-xl font-bold text-white">EU Regulatory Fines</h3>
-          <p class="mt-2 text-muted">
-            Violating the EU AI Act carries fines up to €35M. We ensure your models are strictly compliant.
-          </p>
-        </div>
-        <div class="glass rounded-2xl p-8 flex-shrink-0 w-80 mx-4">
-          <i class="fa-solid fa-shield-halved text-secondary text-3xl icon-glow"></i>
-          <h3 class="mt-4 text-xl font-bold text-white">Prompt Injection Risks</h3>
-          <p class="mt-2 text-muted">
-            Prevent bad actors from bypassing your guardrails. We simulate advanced jailbreak attacks.
-          </p>
-        </div>
-        <div class="glass rounded-2xl p-8 flex-shrink-0 w-80 mx-4">
-          <i class="fa-solid fa-robot text-secondary text-3xl icon-glow"></i>
-          <h3 class="mt-4 text-xl font-bold text-white">Liability & Reputation</h3>
-          <p class="mt-2 text-muted">
-            If your agent lies, you are liable. We stress-test for catastrophic hallucination failures.
-          </p>
-        </div>
-        <div class="glass rounded-2xl p-8 flex-shrink-0 w-80 mx-4">
-          <i class="fa-solid fa-eye text-secondary text-3xl icon-glow"></i>
-          <h3 class="mt-4 text-xl font-bold text-white">Hidden Vulnerabilities</h3>
-          <p class="mt-2 text-muted">
-            Undetected flaws can lead to data breaches and operational failures. Our testing uncovers them all.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- The Solution -->
-  <section id="defense" class="max-w-6xl mx-auto px-6 py-24 text-center">
-    <h2 class="text-4xl font-extrabold mb-8 text-white">
-      Auditing systems with Stress Testing to check compliance
-    </h2>
-    <p class="text-lg text-muted max-w-3xl mx-auto mb-12">
-      We don't just check boxes. Our engine acts as an adversarial auditor, running various scenarios to certify your AI is safe for the public.
-    </p>
-    <div class="flex justify-center space-x-8">
-      <i class="fa-solid fa-shield-alt text-primary text-5xl icon-glow"></i>
-      <i class="fa-solid fa-brain text-secondary text-5xl icon-glow"></i>
-      <i class="fa-solid fa-lock text-primary text-5xl icon-glow"></i>
-    </div>
-  </section>
-
-  <!-- The Process -->
-  <section id="process" class="max-w-6xl mx-auto px-6 py-24">
-    <h2 class="text-4xl font-extrabold text-center mb-16 text-white">
-      The Process
-    </h2>
-    <div class="timeline grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="text-center">
-        <div class="timeline-step mb-4">
-          <i class="fa-solid fa-upload text-primary text-2xl icon-glow"></i>
-        </div>
-        <h4 class="text-xl font-bold mb-2">1. Connect</h4>
-        <p class="text-muted">Securely connect your model endpoint or weights.</p>
-      </div>
-      <div class="text-center">
-        <div class="timeline-step mb-4">
-          <i class="fa-solid fa-bolt text-secondary text-2xl icon-glow"></i>
-        </div>
-        <h4 class="text-xl font-bold mb-2">2. Stress-Test</h4>
-        <p class="text-muted">Our engine runs thousands of compliance checks and scenario tests.</p>
-      </div>
-      <div class="text-center">
-        <div class="timeline-step mb-4">
-          <i class="fa-solid fa-certificate text-primary text-2xl icon-glow"></i>
-        </div>
-        <h4 class="text-xl font-bold mb-2">3. Certify</h4>
-        <p class="text-muted">Receive a detailed audit report and compliance certificate.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- What You Receive -->
-  <section id="deliverables" class="max-w-6xl mx-auto px-6 py-24">
-    <h2 class="text-4xl font-extrabold text-center mb-16 text-white">
-      What You Receive
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <!-- The Report -->
-      <div class="text-center">
-        <div class="glass rounded-2xl p-8 transform rotate-2 hover:rotate-0 transition-transform duration-300">
-          <i class="fas fa-file-pdf text-6xl text-red-500 mb-4"></i>
-          <h3 class="text-xl font-bold text-white mb-2">Audit_Report_v1.pdf</h3>
-          <p class="text-muted mb-6">Comprehensive audit report with detailed findings</p>
-          <a href="Sample.pdf" target="_blank" class="border border-white text-white px-6 py-2 rounded-lg hover:bg-white hover:text-bg transition inline-block">
-            View Sample Report
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center text-center px-6">
+      <div class="max-w-4xl mt-32">
+        <h1 class="text-5xl md:text-7xl font-black leading-tight text-white">
+          Are you from Europe? <span class="text-secondary">Get a Compliance Check for your AI Agent</span>
+        </h1>
+        <p class="mt-6 text-lg text-muted max-w-2xl mx-auto">
+          We automate stress-testing to detect prompt injections, hallucinations, and non-compliance before you deploy.
+        </p>
+        <div class="mt-10">
+          <a href="#contact" class="inline-block glow-btn px-10 py-4 rounded-xl font-semibold text-lg transition">
+            Get Compliance Check With EU AI Act
           </a>
         </div>
-      </div>
-      <!-- The Badge -->
-      <div class="text-center">
-        <div class="relative flex justify-center">
-<img
-  src="image.png"
-  alt="Agenario Certified Seal"
-  class="w-48 h-48 rounded-full border-4 border-primary mt-8 object-cover"
-  style="
-    object-position: center 55%;
-    box-shadow: 0 0 30px rgba(58, 28, 113, 0.8), 0 0 50px rgba(58, 28, 113, 0.4);
-    filter: brightness(1.1);
-  "
->
-
-
-        </div>
-        <h3 class="text-2xl font-bold text-white mt-6 mb-4">The Agenario Certified Seal</h3>
-        <p class="text-muted max-w-md mx-auto">
-          Upon passing all stress tests, you receive the Certified Shield to display on your agent's trust center, proving compliance to your users.
+        <p class="mt-6 text-sm text-muted">
+          Trusted by AI Agencies & Enterprises for Regulatory Safety.
         </p>
       </div>
+    </section>
+
+    <!-- Industry Recognition -->
+    <section class="max-w-4xl mx-auto px-6 py-16">
+      <h2 class="text-3xl font-extrabold text-center mb-12 text-white">
+        Industry Recognition
+      </h2>
+      <div class="glass rounded-2xl p-8 text-center max-w-2xl mx-auto">
+        <div class="flex justify-center mb-4">
+          <i class="fas fa-star text-yellow-400"></i>
+          <i class="fas fa-star text-yellow-400"></i>
+          <i class="fas fa-star text-yellow-400"></i>
+          <i class="fas fa-star text-yellow-400"></i>
+          <i class="fas fa-star text-yellow-400"></i>
+        </div>
+        <blockquote class="text-lg text-muted mb-6 italic">
+          "Tools like Agenario that stress-test AI agents for hidden risks are critical—especially with regulations like
+          the EU AI Act approaching."
+        </blockquote>
+        <cite class="text-sm text-muted">
+          Techgropse || Next-Gen AI Services
+        </cite>
+        <div class="flex justify-center mt-4">
+          <i class="fab fa-linkedin text-secondary text-2xl"></i>
+          <span class="ml-2 text-sm text-muted">LinkedIn Verified</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Threat Landscape -->
+    <section id="risk" class="max-w-7xl mx-auto px-6 py-24">
+      <h2 class="text-4xl font-extrabold text-center mb-16 text-white">
+        The Infinite Attack Surface
+      </h2>
+      <div class="marquee-container">
+        <div class="marquee-row">
+          <div class="glass rounded-2xl p-8 flex-shrink-0 w-80 mx-4">
+            <i class="fa-solid fa-gavel text-secondary text-3xl icon-glow"></i>
+            <h3 class="mt-4 text-xl font-bold text-white">EU Regulatory Fines</h3>
+            <p class="mt-2 text-muted">
+              Violating the EU AI Act carries fines up to €35M. We ensure your models are strictly compliant.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-8 flex-shrink-0 w-80 mx-4">
+            <i class="fa-solid fa-shield-halved text-secondary text-3xl icon-glow"></i>
+            <h3 class="mt-4 text-xl font-bold text-white">Prompt Injection Risks</h3>
+            <p class="mt-2 text-muted">
+              Prevent bad actors from bypassing your guardrails. We simulate advanced jailbreak attacks.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-8 flex-shrink-0 w-80 mx-4">
+            <i class="fa-solid fa-robot text-secondary text-3xl icon-glow"></i>
+            <h3 class="mt-4 text-xl font-bold text-white">Liability & Reputation</h3>
+            <p class="mt-2 text-muted">
+              If your agent lies, you are liable. We stress-test for catastrophic hallucination failures.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-8 flex-shrink-0 w-80 mx-4">
+            <i class="fa-solid fa-eye text-secondary text-3xl icon-glow"></i>
+            <h3 class="mt-4 text-xl font-bold text-white">Hidden Vulnerabilities</h3>
+            <p class="mt-2 text-muted">
+              Undetected flaws can lead to data breaches and operational failures. Our testing uncovers them all.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Solution -->
+    <section id="defense" class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h2 class="text-4xl font-extrabold mb-8 text-white">
+        Auditing systems with Stress Testing to check compliance
+      </h2>
+      <p class="text-lg text-muted max-w-3xl mx-auto mb-12">
+        We don't just check boxes. Our engine acts as an adversarial auditor, running various scenarios to certify your
+        AI is safe for the public.
+      </p>
+      <div class="flex justify-center space-x-8">
+        <i class="fa-solid fa-shield-alt text-primary text-5xl icon-glow"></i>
+        <i class="fa-solid fa-brain text-secondary text-5xl icon-glow"></i>
+        <i class="fa-solid fa-lock text-primary text-5xl icon-glow"></i>
+      </div>
+    </section>
+
+    <!-- The Process -->
+    <section id="process" class="max-w-6xl mx-auto px-6 py-24">
+      <h2 class="text-4xl font-extrabold text-center mb-16 text-white">
+        The Process
+      </h2>
+      <div class="timeline grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="timeline-step mb-4">
+            <i class="fa-solid fa-upload text-primary text-2xl icon-glow"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-2">1. Connect</h4>
+          <p class="text-muted">Securely connect your model endpoint or weights.</p>
+        </div>
+        <div class="text-center">
+          <div class="timeline-step mb-4">
+            <i class="fa-solid fa-bolt text-secondary text-2xl icon-glow"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-2">2. Stress-Test</h4>
+          <p class="text-muted">Our engine runs thousands of compliance checks and scenario tests.</p>
+        </div>
+        <div class="text-center">
+          <div class="timeline-step mb-4">
+            <i class="fa-solid fa-certificate text-primary text-2xl icon-glow"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-2">3. Certify</h4>
+          <p class="text-muted">Receive a detailed audit report and compliance certificate.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What You Receive -->
+    <section id="deliverables" class="max-w-6xl mx-auto px-6 py-24">
+      <h2 class="text-4xl font-extrabold text-center mb-16 text-white">
+        What You Receive
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="text-center">
+          <div class="glass rounded-2xl p-8 transform rotate-2 hover:rotate-0 transition-transform duration-300">
+            <i class="fas fa-file-pdf text-6xl text-red-500 mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Audit_Report_v1.pdf</h3>
+            <p class="text-muted mb-6">Comprehensive audit report with detailed findings</p>
+            <a href="Sample.pdf" target="_blank"
+              class="border border-white text-white px-6 py-2 rounded-lg hover:bg-white hover:text-bg transition inline-block">
+              View Sample Report
+            </a>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="relative flex justify-center">
+            <img src="image.png" alt="Agenario Certified Seal"
+              class="w-48 h-48 rounded-full border-4 border-primary mt-8 object-cover" style="
+                object-position: center 55%;
+                box-shadow: 0 0 30px rgba(58, 28, 113, 0.8), 0 0 50px rgba(58, 28, 113, 0.4);
+                filter: brightness(1.1);
+              ">
+          </div>
+          <h3 class="text-2xl font-bold text-white mt-6 mb-4">The Agenario Certified Seal</h3>
+          <p class="text-muted max-w-md mx-auto">
+            Upon passing all stress tests, you receive the Certified Shield to display on your agent's trust center,
+            proving compliance to your users.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h2 class="text-4xl font-extrabold mb-16 text-white">
+        Meet the Founder
+      </h2>
+      <div class="glass rounded-3xl p-8 max-w-md mx-auto">
+        <img src="1768114035312.jpg" alt="Pranav Raj M."
+          class="w-28 h-28 rounded-full mx-auto mb-6 mt-4 border-2 border-primary grayscale"
+          style="box-shadow: 0 0 10px rgba(58, 28, 113, 0.5);">
+        <h3 class="text-2xl font-bold mb-2 text-white">Pranav Raj M.</h3>
+        <p class="text-muted mb-6">Founder of Agenario</p>
+        <a href="https://in.linkedin.com/in/moganti-pranav-raj" target="_blank"
+          class="inline-flex items-center bg-secondary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-80 transition">
+          <i class="fab fa-linkedin mr-2"></i>
+          Connect on LinkedIn
+        </a>
+      </div>
+    </section>
+
+    <!-- Final CTA & Contact -->
+    <section id="contact" class="px-6 py-32 flex justify-center">
+      <div class="glass rounded-3xl p-10 w-full max-w-xl">
+        <h3 class="text-3xl font-extrabold text-center mb-8 text-white">
+          Get Your Audit Report
+        </h3>
+        <form action="https://formsubmit.co/pranav@agenario.tech" method="POST" class="space-y-6">
+          <input type="hidden" name="_subject" value="New Contact from Agenario Website">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="full_name" required placeholder="Full Name"
+            class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3 text-white placeholder-muted focus:outline-none focus:border-secondary" />
+          <input type="email" name="work_email" required placeholder="Work Email"
+            class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3 text-white placeholder-muted focus:outline-none focus:border-secondary" />
+          <input type="text" name="company_name" required placeholder="Company Name"
+            class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3 text-white placeholder-muted focus:outline-none focus:border-secondary" />
+          <input type="text" name="job_title" required placeholder="Job Title"
+            class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3 text-white placeholder-muted focus:outline-none focus:border-secondary" />
+          <textarea name="project_details" required placeholder="Project Details / Message" rows="4"
+            class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3 text-white placeholder-muted focus:outline-none focus:border-secondary resize-none"></textarea>
+          <button type="submit"
+            class="w-full bg-primary py-4 rounded-xl font-semibold text-lg hover:bg-opacity-80 transition">
+            Request Compliance Audit
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-muted pb-10 text-sm">
+      <div class="mb-6">
+        <p class="mb-2">Prefer a direct conversation?</p>
+        <a href="mailto:support@agenario.tech"
+          class="text-secondary hover:text-white transition">support@agenario.tech</a>
+      </div>
+      <div class="flex justify-center space-x-4 mb-4">
+        <a href="https://in.linkedin.com/in/moganti-pranav-raj" target="_blank"
+          class="text-muted hover:text-secondary transition">
+          <i class="fab fa-linkedin text-xl"></i>
+        </a>
+      </div>
+      <p>© 2026 Agenario. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll Overlay Cards -->
+    <div id="overlay-left"
+      class="fixed left-4 top-1/2 -translate-y-1/2 glass rounded-2xl p-6 w-40 opacity-0 pointer-events-none z-40 transform -translate-x-full rotate-3">
+      <img src="image-1768337075155.png" alt="AI Auditing" class="w-full h-40 object-cover rounded-lg mb-4">
+      <h3 class="text-lg font-bold mb-2">Comprehensive AI Auditing</h3>
+      <p class="text-sm text-muted">Thorough audits to ensure your AI models meet all regulatory standards.</p>
+    </div>
+    <div id="overlay-right"
+      class="fixed right-4 top-1/2 -translate-y-1/2 glass rounded-2xl p-6 w-40 opacity-0 pointer-events-none z-40 transform translate-x-full -rotate-3">
+      <img src="image-1768337082560.png" alt="Compliance Testing" class="w-full h-40 object-cover rounded-lg mb-4">
+      <h3 class="text-lg font-bold mb-2">Compliance Stress Testing</h3>
+      <p class="text-sm text-muted">Rigorous testing to identify and mitigate compliance risks.</p>
+    </div>
+    <div id="overlay-left2"
+      class="fixed left-4 top-1/2 -translate-y-1/2 glass rounded-2xl p-6 w-40 opacity-0 pointer-events-none z-40 transform -translate-x-full rotate-3">
+      <img src="https://picsum.photos/150/250?random=3" alt="Certification"
+        class="w-full h-40 object-cover rounded-lg mb-4">
+      <h3 class="text-lg font-bold mb-2">EU AI Act Certification</h3>
+      <p class="text-sm text-muted">Get certified and ready for deployment with confidence.</p>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="max-w-6xl mx-auto px-6 py-24 text-center">
-    <h2 class="text-4xl font-extrabold mb-16 text-white">
-      Meet the Founder
-    </h2>
-    <div class="glass rounded-3xl p-8 max-w-md mx-auto">
-      <img src="1768114035312.jpg" alt="Pranav Raj M." class="w-28 h-28 rounded-full mx-auto mb-6 mt-4 border-2 border-primary grayscale" style="box-shadow: 0 0 10px rgba(58, 28, 113, 0.5);">
-      <h3 class="text-2xl font-bold mb-2 text-white">Pranav Raj M.</h3>
-      <p class="text-muted mb-6">Founder of Agenario</p>
-      <a href="https://in.linkedin.com/in/moganti-pranav-raj" target="_blank" class="inline-flex items-center bg-secondary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-80 transition">
-        <i class="fab fa-linkedin mr-2"></i>
-        Connect on LinkedIn
-      </a>
-    </div>
-  </section>
-
-  <!-- Final CTA & Contact -->
-  <section id="contact" class="px-6 py-32 flex justify-center">
-    <div class="glass rounded-3xl p-10 w-full max-w-xl">
-      <h3 class="text-3xl font-extrabold text-center mb-8 text-white">
-        Get Your Audit Report
-      </h3>
-      <form action="https://formsubmit.co/agenario.audit@gmail.com" method="POST" class="space-y-6">
-        <input type="hidden" name="_subject" value="New Contact from Agenario Website">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="full_name" required placeholder="Full Name"
-          class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3 text-white placeholder-muted focus:outline-none focus:border-secondary" />
-        <input type="email" name="work_email" required placeholder="Work Email"
-          class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3 text-white placeholder-muted focus:outline-none focus:border-secondary" />
-        <input type="text" name="company_name" required placeholder="Company Name"
-          class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3 text-white placeholder-muted focus:outline-none focus:border-secondary" />
-        <input type="text" name="job_title" required placeholder="Job Title"
-          class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3 text-white placeholder-muted focus:outline-none focus:border-secondary" />
-        <textarea name="project_details" required placeholder="Project Details / Message" rows="4"
-          class="w-full bg-transparent border border-white/20 rounded-xl px-4 py-3 text-white placeholder-muted focus:outline-none focus:border-secondary resize-none"></textarea>
-        <button type="submit" class="w-full bg-primary py-4 rounded-xl font-semibold text-lg hover:bg-opacity-80 transition">
-          Request Compliance Audit
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center text-muted pb-10 text-sm">
-    <div class="mb-6">
-      <p class="mb-2">Prefer a direct conversation?</p>
-      <a href="mailto:support@agenario.tech" class="text-secondary hover:text-white transition">support@agenario.tech</a>
-    </div>
-    <div class="flex justify-center space-x-4 mb-4">
-      <a href="https://in.linkedin.com/in/moganti-pranav-raj" target="_blank" class="text-muted hover:text-secondary transition">
-        <i class="fab fa-linkedin text-xl"></i>
-      </a>
-    </div>
-    <p>© 2026 Agenario. All rights reserved.</p>
-  </footer>
-
-  <!-- Scroll Overlay Cards -->
-  <div id="overlay-left"
-    class="fixed left-4 top-1/2 -translate-y-1/2 glass rounded-2xl p-6 w-40 opacity-0 pointer-events-none z-40 transform -translate-x-full rotate-3">
-    <img src="image-1768337075155.png" alt="AI Auditing" class="w-full h-40 object-cover rounded-lg mb-4">
-    <h3 class="text-lg font-bold mb-2">Comprehensive AI Auditing</h3>
-    <p class="text-sm text-muted">Thorough audits to ensure your AI models meet all regulatory standards.</p>
-  </div>
-  <div id="overlay-right"
-    class="fixed right-4 top-1/2 -translate-y-1/2 glass rounded-2xl p-6 w-40 opacity-0 pointer-events-none z-40 transform translate-x-full -rotate-3">
-    <img src="image-1768337082560.png" alt="Compliance Testing" class="w-full h-40 object-cover rounded-lg mb-4">
-    <h3 class="text-lg font-bold mb-2">Compliance Stress Testing</h3>
-    <p class="text-sm text-muted">Rigorous testing to identify and mitigate compliance risks.</p>
-  </div>
-  <div id="overlay-left2"
-    class="fixed left-4 top-1/2 -translate-y-1/2 glass rounded-2xl p-6 w-40 opacity-0 pointer-events-none z-40 transform -translate-x-full rotate-3">
-    <img src="https://picsum.photos/150/250?random=3" alt="Certification"
-      class="w-full h-40 object-cover rounded-lg mb-4">
-    <h3 class="text-lg font-bold mb-2">EU AI Act Certification</h3>
-    <p class="text-sm text-muted">Get certified and ready for deployment with confidence.</p>
-  </div>
-
+  <!-- ========= AGENARIO SCRIPT (ORIGINAL, WITH RENAMED MOBILE IDS) ========= -->
   <script>
-    // Mobile Menu Toggle Logic
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileIcon = mobileBtn.querySelector('i');
+    // Agency view / Agenario view toggle
+    const agencyRoot = document.getElementById('agency-root');
+    const agenarioEngine = document.getElementById('agenario-engine');
 
-    function toggleMobileMenu() {
-      mobileMenu.classList.toggle('hidden');
-      // Change icon from Bars to X
-      if (mobileMenu.classList.contains('hidden')) {
-        mobileIcon.classList.remove('fa-times');
-        mobileIcon.classList.add('fa-bars');
+    function showAgency() {
+      agencyRoot.classList.remove('hidden');
+      agenarioEngine.classList.add('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showAgenario() {
+      agencyRoot.classList.add('hidden');
+      agenarioEngine.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Global nav handlers
+    document.querySelectorAll('[data-nav-section]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const section = e.currentTarget.getAttribute('data-nav-section');
+        showAgency();
+        const target = document.getElementById(section);
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 50);
+        }
+      });
+    });
+
+    const navHome = document.getElementById('nav-home');
+    if (navHome) {
+      navHome.addEventListener('click', () => {
+        showAgency();
+        const home = document.getElementById('home');
+        if (home) {
+          setTimeout(() => {
+            home.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 50);
+        }
+      });
+    }
+
+    const navAgenario = document.getElementById('nav-agenario');
+    const mobileNavAgenario = document.getElementById('mobile-nav-agenario');
+    const btnViewAgenario = document.getElementById('btn-view-agenario');
+
+    [navAgenario, mobileNavAgenario, btnViewAgenario].forEach(el => {
+      if (el) {
+        el.addEventListener('click', () => {
+          showAgenario();
+        });
+      }
+    });
+
+    // Agency mobile menu toggle
+    const agencyMobileToggle = document.getElementById('agency-mobile-toggle');
+    const agencyMobileMenu = document.getElementById('agency-mobile-menu');
+    const agencyIconOpen = document.getElementById('agency-icon-open');
+    const agencyIconClose = document.getElementById('agency-icon-close');
+
+    if (agencyMobileToggle && agencyMobileMenu) {
+      agencyMobileToggle.addEventListener('click', () => {
+        const isHidden = agencyMobileMenu.classList.contains('hidden');
+        agencyMobileMenu.classList.toggle('hidden', !isHidden);
+        agencyIconOpen.classList.toggle('hidden', !isHidden);
+        agencyIconClose.classList.toggle('hidden', isHidden);
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!agencyMobileToggle.contains(e.target) && !agencyMobileMenu.contains(e.target)) {
+          agencyMobileMenu.classList.add('hidden');
+          agencyIconOpen.classList.remove('hidden');
+          agencyIconClose.classList.add('hidden');
+        }
+      });
+    }
+
+    // Agenario mobile menu toggle
+    const agenarioMobileBtn = document.getElementById('agenario-mobile-menu-btn');
+    const agenarioMobileMenu = document.getElementById('agenario-mobile-menu');
+
+    function agenarioToggleMobileMenu() {
+      if (!agenarioMobileMenu) return;
+      agenarioMobileMenu.classList.toggle('hidden');
+      const icon = agenarioMobileBtn.querySelector('i');
+      if (agenarioMobileMenu.classList.contains('hidden')) {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
       } else {
-        mobileIcon.classList.remove('fa-bars');
-        mobileIcon.classList.add('fa-times');
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
       }
     }
 
-    mobileBtn.addEventListener('click', toggleMobileMenu);
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!mobileBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-        mobileIcon.classList.remove('fa-times');
-        mobileIcon.classList.add('fa-bars');
-      }
-    });
-
-    // Three.js Background Animation
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('threejs-bg'), alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0x18122B, 0);
-
-    // Attack Particles
-    const attackParticles = [];
-    const attackGeometry = new THREE.SphereGeometry(0.02, 8, 8);
-    const colors = [0xff4500, 0x3A1C71, 0x2A9D8F]; // Red, Purple, Cyan
-    for (let i = 0; i < 500; i++) {
-      const material = new THREE.MeshBasicMaterial({ color: colors[Math.floor(Math.random() * colors.length)] });
-      const particle = new THREE.Mesh(attackGeometry, material);
-      particle.position.set(
-        (Math.random() - 0.5) * 20,
-        (Math.random() - 0.5) * 20,
-        (Math.random() - 0.5) * 20
-      );
-      particle.velocity = new THREE.Vector3(
-        (Math.random() - 0.5) * 0.01,
-        (Math.random() - 0.5) * 0.01,
-        (Math.random() - 0.5) * 0.01
-      );
-      scene.add(particle);
-      attackParticles.push(particle);
-    }
-
-    // Shield Network
-    const shieldNodes = [];
-    const shieldLines = [];
-    const nodeGeometry = new THREE.SphereGeometry(0.05, 8, 8);
-    const nodeMaterial = new THREE.MeshBasicMaterial({ color: 0x3A1C71 });
-    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x2A9D8F });
-
-    for (let i = 0; i < 25; i++) {
-      const node = new THREE.Mesh(nodeGeometry, nodeMaterial);
-      node.position.set(
-        (Math.random() - 0.5) * 6,
-        (Math.random() - 0.5) * 6,
-        (Math.random() - 0.5) * 6
-      );
-      scene.add(node);
-      shieldNodes.push(node);
-    }
-
-    // Create lines between nodes
-    for (let i = 0; i < shieldNodes.length; i++) {
-      for (let j = i + 1; j < shieldNodes.length; j++) {
-        if (shieldNodes[i].position.distanceTo(shieldNodes[j].position) < 3) {
-          const geometry = new THREE.BufferGeometry().setFromPoints([shieldNodes[i].position, shieldNodes[j].position]);
-          const line = new THREE.Line(geometry, lineMaterial);
-          scene.add(line);
-          shieldLines.push(line);
-        }
-      }
-    }
-
-    camera.position.z = 5;
-
-    // Mouse interaction
-    let mouseX = 0, mouseY = 0;
-    document.addEventListener('mousemove', (event) => {
-      if (event.target.closest('.marquee-container')) return;
-      mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-      mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
-    });
-
-    function animate() {
-      requestAnimationFrame(animate);
-
-      // Update attack particles
-      attackParticles.forEach(particle => {
-        particle.position.add(particle.velocity);
-        if (particle.position.length() > 15) {
-          particle.position.set(
-            (Math.random() - 0.5) * 20,
-            (Math.random() - 0.5) * 20,
-            (Math.random() - 0.5) * 20
-          );
+    if (agenarioMobileBtn && agenarioMobileMenu) {
+      agenarioMobileBtn.addEventListener('click', agenarioToggleMobileMenu);
+      document.addEventListener('click', (e) => {
+        if (!agenarioMobileBtn.contains(e.target) && !agenarioMobileMenu.contains(e.target)) {
+          agenarioMobileMenu.classList.add('hidden');
+          const icon = agenarioMobileBtn.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
         }
       });
-
-      // Subtle camera rotation based on mouse
-      camera.position.x += (mouseX * 0.5 - camera.position.x) * 0.05;
-      camera.position.y += (mouseY * 0.5 - camera.position.y) * 0.05;
-      camera.lookAt(scene.position);
-
-      renderer.render(scene, camera);
     }
-    animate();
 
-    // Resize handler
-    window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
+    // Three.js Background for Agenario
+    const threeCanvas = document.getElementById('threejs-bg');
+    if (threeCanvas && window.THREE) {
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ canvas: threeCanvas, alpha: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
-    });
+      renderer.setClearColor(0x18122B, 0);
 
-    // GSAP Scroll Animations
-    gsap.registerPlugin(ScrollTrigger);
+      const attackParticles = [];
+      const attackGeometry = new THREE.SphereGeometry(0.02, 8, 8);
+      const colors = [0xff4500, 0x3A1C71, 0x2A9D8F];
 
-    gsap.utils.toArray('.glass').forEach((element) => {
-      gsap.from(element, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
+      for (let i = 0; i < 500; i++) {
+        const material = new THREE.MeshBasicMaterial({ color: colors[Math.floor(Math.random() * colors.length)] });
+        const particle = new THREE.Mesh(attackGeometry, material);
+        particle.position.set(
+          (Math.random() - 0.5) * 20,
+          (Math.random() - 0.5) * 20,
+          (Math.random() - 0.5) * 20
+        );
+        particle.velocity = new THREE.Vector3(
+          (Math.random() - 0.5) * 0.01,
+          (Math.random() - 0.5) * 0.01,
+          (Math.random() - 0.5) * 0.01
+        );
+        scene.add(particle);
+        attackParticles.push(particle);
+      }
+
+      const shieldNodes = [];
+      const shieldLines = [];
+      const nodeGeometry = new THREE.SphereGeometry(0.05, 8, 8);
+      const nodeMaterial = new THREE.MeshBasicMaterial({ color: 0x3A1C71 });
+      const lineMaterial = new THREE.LineBasicMaterial({ color: 0x2A9D8F });
+
+      for (let i = 0; i < 25; i++) {
+        const node = new THREE.Mesh(nodeGeometry, nodeMaterial);
+        node.position.set(
+          (Math.random() - 0.5) * 6,
+          (Math.random() - 0.5) * 6,
+          (Math.random() - 0.5) * 6
+        );
+        scene.add(node);
+        shieldNodes.push(node);
+      }
+
+      for (let i = 0; i < shieldNodes.length; i++) {
+        for (let j = i + 1; j < shieldNodes.length; j++) {
+          if (shieldNodes[i].position.distanceTo(shieldNodes[j].position) < 3) {
+            const geometry = new THREE.BufferGeometry().setFromPoints([shieldNodes[i].position, shieldNodes[j].position]);
+            const line = new THREE.Line(geometry, lineMaterial);
+            scene.add(line);
+            shieldLines.push(line);
+          }
+        }
+      }
+
+      camera.position.z = 5;
+
+      let mouseX = 0, mouseY = 0;
+      document.addEventListener('mousemove', (event) => {
+        if (event.target.closest('.marquee-container')) return;
+        mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+        mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        attackParticles.forEach(particle => {
+          particle.position.add(particle.velocity);
+          if (particle.position.length() > 15) {
+            particle.position.set(
+              (Math.random() - 0.5) * 20,
+              (Math.random() - 0.5) * 20,
+              (Math.random() - 0.5) * 20
+            );
+          }
+        });
+
+        camera.position.x += (mouseX * 0.5 - camera.position.x) * 0.05;
+        camera.position.y += (mouseY * 0.5 - camera.position.y) * 0.05;
+        camera.lookAt(scene.position);
+
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    }
+
+    // GSAP Animations for Agenario
+    if (window.gsap && window.ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.utils.toArray('.glass').forEach((element) => {
+        gsap.from(element, {
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+          }
+        });
+      });
+
+      gsap.to('#overlay-left', {
         scrollTrigger: {
-          trigger: element,
-          start: 'top 80%',
-          end: 'bottom 20%',
-          toggleActions: 'play none none reverse'
+          trigger: '#process',
+          start: 'top center',
+          end: 'bottom center',
+          onEnter: () => gsap.to('#overlay-left', { opacity: 1, x: 0, duration: 0.5 }),
+          onLeave: () => gsap.to('#overlay-left', { opacity: 0, x: -100, duration: 0.5 }),
+          onEnterBack: () => gsap.to('#overlay-left', { opacity: 1, x: 0, duration: 0.5 }),
+          onLeaveBack: () => gsap.to('#overlay-left', { opacity: 0, x: -100, duration: 0.5 })
         }
       });
-    });
 
-    // Scroll-triggered overlay cards
-    gsap.to('#overlay-left', {
-      scrollTrigger: {
-        trigger: '#process',
-        start: 'top center',
-        end: 'bottom center',
-        onEnter: () => gsap.to('#overlay-left', { opacity: 1, x: 0, duration: 0.5 }),
-        onLeave: () => gsap.to('#overlay-left', { opacity: 0, x: -100, duration: 0.5 }),
-        onEnterBack: () => gsap.to('#overlay-left', { opacity: 1, x: 0, duration: 0.5 }),
-        onLeaveBack: () => gsap.to('#overlay-left', { opacity: 0, x: -100, duration: 0.5 })
-      }
-    });
+      gsap.to('#overlay-right', {
+        scrollTrigger: {
+          trigger: '#contact',
+          start: 'top center',
+          end: 'bottom center',
+          onEnter: () => gsap.to('#overlay-right', { opacity: 1, x: 0, duration: 0.5 }),
+          onLeave: () => gsap.to('#overlay-right', { opacity: 0, x: 100, duration: 0.5 }),
+          onEnterBack: () => gsap.to('#overlay-right', { opacity: 1, x: 0, duration: 0.5 }),
+          onLeaveBack: () => gsap.to('#overlay-right', { opacity: 0, x: 100, duration: 0.5 })
+        }
+      });
 
-    gsap.to('#overlay-right', {
-      scrollTrigger: {
-        trigger: '#contact',
-        start: 'top center',
-        end: 'bottom center',
-        onEnter: () => gsap.to('#overlay-right', { opacity: 1, x: 0, duration: 0.5 }),
-        onLeave: () => gsap.to('#overlay-right', { opacity: 0, x: 100, duration: 0.5 }),
-        onEnterBack: () => gsap.to('#overlay-right', { opacity: 1, x: 0, duration: 0.5 }),
-        onLeaveBack: () => gsap.to('#overlay-right', { opacity: 0, x: 100, duration: 0.5 })
-      }
-    });
-
-    gsap.to('#overlay-left2', {
-      scrollTrigger: {
-        trigger: '#contact',
-        start: 'center center',
-        end: 'bottom center',
-        onEnter: () => gsap.to('#overlay-left2', { opacity: 1, x: 0, duration: 0.5 }),
-        onLeave: () => gsap.to('#overlay-left2', { opacity: 0, x: -100, duration: 0.5 }),
-        onEnterBack: () => gsap.to('#overlay-left2', { opacity: 1, x: 0, duration: 0.5 }),
-        onLeaveBack: () => gsap.to('#overlay-left2', { opacity: 0, x: -100, duration: 0.5 })
-      }
-    });
-
+      gsap.to('#overlay-left2', {
+        scrollTrigger: {
+          trigger: '#contact',
+          start: 'center center',
+          end: 'bottom center',
+          onEnter: () => gsap.to('#overlay-left2', { opacity: 1, x: 0, duration: 0.5 }),
+          onLeave: () => gsap.to('#overlay-left2', { opacity: 0, x: -100, duration: 0.5 }),
+          onEnterBack: () => gsap.to('#overlay-left2', { opacity: 1, x: 0, duration: 0.5 }),
+          onLeaveBack: () => gsap.to('#overlay-left2', { opacity: 0, x: -100, duration: 0.5 })
+        }
+      });
+    }
   </script>
-
 </body>
 
 </html>

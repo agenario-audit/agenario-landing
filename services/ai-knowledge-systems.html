@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Knowledge Systems - Agenario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { baseDark: '#09090b', surfaceDark: '#111114', accentViolet: '#7c3aed', accentTeal: '#0d9488' },
+                    fontFamily: { heading: ['Outfit', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: #09090b;
+            color: #e4e4e7;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .premium-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header class="border-b border-white/[0.05] p-6 lg:px-8 relative z-10 bg-baseDark/50 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-3 group">
+                <img src="../Agenario.jpg" alt="Agenario Logo" class="h-10 w-auto rounded-md object-contain" />
+                <span
+                    class="font-semibold text-white tracking-wide group-hover:text-teal-400 transition-colors">Agenario
+                    Labs</span>
+            </a>
+            <a href="../index.html" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">&larr;
+                Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Animated Ambient Background Layer -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div
+            class="absolute top-[-10%] left-[20%] w-[60%] h-[60%] rounded-full bg-teal-600/10 blur-[120px] mix-blend-screen animate-[pulse_10s_ease-in-out_infinite]">
+        </div>
+        <div
+            class="absolute bottom-[0%] right-[10%] w-[50%] h-[50%] rounded-full bg-emerald-600/10 blur-[100px] mix-blend-screen animate-[pulse_8s_ease-in-out_infinite_reverse]">
+        </div>
+        <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBNMzAuNSAwcTguNSAzOS41IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-40 [mask-image:linear-gradient(to_bottom,white,transparent)]">
+        </div>
+    </div>
+
+    <main class="flex-grow py-16 px-4 sm:px-6 relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-12 text-center">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-semibold tracking-wider uppercase mb-4">RAG
+                    & Intelligence</span>
+                <h1 class="text-4xl sm:text-5xl font-bold text-white mb-6">AI Knowledge Systems</h1>
+                <p class="text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">Companies have huge internal data:
+                    Google Drive, Slack, Notion, CRMs, PDFs, and contracts. They want AI that understands all of it
+                    globally.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6 mb-16">
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-teal-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-brain text-teal-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Enterprise Knowledge RAG Systems</h3>
+                    <p class="text-sm text-zinc-400">AI trained securely on company documents to answer questions
+                        instantly.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-teal-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-users text-teal-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Custom AI Co-Pilots</h3>
+                    <p class="text-sm text-zinc-400">Internal assistants tailored for specific teams like sales,
+                        support, or legal.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-teal-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-file-signature text-teal-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Automated RFP / Proposals</h3>
+                    <p class="text-sm text-zinc-400">AI that rapidly reads complex RFP documents and drafts extensive
+                        and detailed proposals.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-teal-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-magnifying-glass-chart text-teal-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Multi-Agent Research Systems</h3>
+                    <p class="text-sm text-zinc-400">A targeted AI team generating market analysis and competitive
+                        intelligence autonomously.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-teal-500/30 transition-colors sm:col-span-2">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-gauge-high text-teal-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Executive Intelligence Dashboards</h3>
+                    <p class="text-sm text-zinc-400">AI synthesizing and generating strategic reports from massive
+                        enterprise datasets.</p>
+                </div>
+            </div>
+
+            <div
+                class="premium-card rounded-2xl p-8 sm:p-10 border border-teal-500/20 bg-gradient-to-br from-teal-500/10 to-transparent flex flex-col md:flex-row gap-10 items-center justify-between">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-gem text-teal-400 text-xl"></i> Instant Clarity
+                    </h2>
+                    <p class="text-zinc-300 mb-4 font-medium text-lg leading-relaxed">
+                        Companies are drowning in information chaos. AI knowledge systems give them instant clarity and
+                        actionable insights out of thousands of documents.
+                    </p>
+                    <p class="text-teal-400/80 font-medium text-sm">This is where advanced companies leap ahead of their
+                        competition.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-baseDark/80 p-8 rounded-xl border border-teal-500/30 shadow-[0_0_30px_rgba(13,148,136,0.15)] min-w-[300px] text-center">
+                    <h4 class="text-xs text-teal-300 uppercase tracking-[0.2em] font-bold mb-4">Enterprise Advantage
+                    </h4>
+                    <div class="text-3xl font-extrabold text-white tracking-tight mb-2">100x</div>
+                    <p class="text-sm text-zinc-500 font-medium">Faster Information Retrieval</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

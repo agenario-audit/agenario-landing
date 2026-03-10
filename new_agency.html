@@ -1,0 +1,675 @@
+<!-- ================= AGENCY MAIN APP ROOT ================= -->
+<div id="agency-root" class="min-h-screen flex flex-col bg-baseDark selection:bg-accentViolet selection:text-white">
+
+    <!-- Sticky Navbar -->
+    <header class="sticky top-0 z-40 border-b border-white/[0.05] premium-glass transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Brand -->
+                <button id="nav-home" type="button" class="flex items-center gap-3 group">
+                    <img src="./Agenario.jpg" alt="Agenario Logo" class="h-10 w-auto object-contain rounded-md" />
+                    <div class="hidden sm:flex flex-col items-start">
+                        <span
+                            class="text-sm sm:text-base font-semibold leading-tight text-white tracking-wide group-hover:text-accentText transition-colors duration-300">Agenario
+                            Labs</span>
+                        <span class="text-[10px] text-zinc-500 uppercase tracking-[0.2em] font-medium">Smart
+                            Business Automation</span>
+                    </div>
+                </button>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <button class="text-zinc-400 hover:text-white transition-colors duration-300"
+                        data-nav-section="home" type="button">
+                        Home
+                    </button>
+                    <!-- Services Dropdown Placeholder (To be filled in next step from User) -->
+                    <div class="relative" id="services-dropdown-container">
+                        <button
+                            class="text-zinc-400 hover:text-white transition-colors duration-300 flex items-center gap-1 py-1 focus:outline-none"
+                            type="button"
+                            onclick="document.getElementById('services-mega-menu').classList.toggle('hidden'); document.addEventListener('click', function closeMenu(e) { if(!e.target.closest('#services-dropdown-container')) { document.getElementById('services-mega-menu').classList.add('hidden'); document.removeEventListener('click', closeMenu); } })"
+                            id="services-menu-btn">
+                            Our Services <i class="fa-solid fa-chevron-down text-[10px] opacity-70"></i>
+                        </button>
+
+                        <!-- Mega Menu -->
+                        <div id="services-mega-menu"
+                            class="hidden absolute top-full left-0 mt-2 w-[550px] premium-card rounded-xl border border-white/10 flex z-50 shadow-2xl overflow-hidden cursor-default text-left bg-zinc-900/95 backdrop-blur-xl">
+                            <div class="grid grid-cols-2 p-2 gap-1">
+                                <!-- Feature 1 -->
+                                <a href="/services/ai-customer-operations.html"
+                                    class="p-4 rounded-lg hover:bg-white/5 transition-colors group/item block">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div
+                                            class="h-8 w-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
+                                            <i class="fa-solid fa-headset text-indigo-400 text-sm"></i>
+                                        </div>
+                                        <h4
+                                            class="text-sm font-semibold text-white group-hover/item:text-indigo-400 transition-colors">
+                                            AI Customer Operations</h4>
+                                    </div>
+                                    <p class="text-[11px] text-zinc-400 leading-relaxed">24/7 Voice agents, lead
+                                        qualification, and omnichannel chatbots.</p>
+                                </a>
+
+                                <!-- Feature 2 -->
+                                <a href="/services/ai-operations-automation.html"
+                                    class="p-4 rounded-lg hover:bg-white/5 transition-colors group/item block">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div
+                                            class="h-8 w-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
+                                            <i class="fa-solid fa-gears text-purple-400 text-sm"></i>
+                                        </div>
+                                        <h4
+                                            class="text-sm font-semibold text-white group-hover/item:text-purple-400 transition-colors">
+                                            Operations Automation</h4>
+                                    </div>
+                                    <p class="text-[11px] text-zinc-400 leading-relaxed">Automate invoices, documents,
+                                        onboarding, and CRM data sync.</p>
+                                </a>
+
+                                <!-- Feature 3 -->
+                                <a href="/services/ai-knowledge-systems.html"
+                                    class="p-4 rounded-lg hover:bg-white/5 transition-colors group/item block">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div
+                                            class="h-8 w-8 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center">
+                                            <i class="fa-solid fa-database text-teal-400 text-sm"></i>
+                                        </div>
+                                        <h4
+                                            class="text-sm font-semibold text-white group-hover/item:text-teal-400 transition-colors">
+                                            AI Knowledge Systems</h4>
+                                    </div>
+                                    <p class="text-[11px] text-zinc-400 leading-relaxed">Enterprise RAG, AI Co-Pilots,
+                                        and automated proposal generation.</p>
+                                </a>
+
+                                <!-- Feature 4 -->
+                                <a href="/services/ai-infrastructure.html"
+                                    class="p-4 rounded-lg hover:bg-white/5 transition-colors group/item block">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div
+                                            class="h-8 w-8 rounded-lg bg-zinc-700/30 border border-zinc-600/50 flex items-center justify-center">
+                                            <i class="fa-solid fa-server text-zinc-300 text-sm"></i>
+                                        </div>
+                                        <h4
+                                            class="text-sm font-semibold text-white group-hover/item:text-zinc-300 transition-colors">
+                                            Security & Management</h4>
+                                    </div>
+                                    <p class="text-[11px] text-zinc-400 leading-relaxed">ROI audits, data security,
+                                        analytics, and architecture consulting.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="nav-agenario"
+                        class="text-zinc-400 hover:text-accentText transition-colors duration-300 flex items-center gap-2"
+                        type="button">
+                        <i class="fa-solid fa-shield-halved text-[10px] text-accentViolet"></i>
+                        Security Engine
+                    </button>
+                    <button
+                        class="btn-primary rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide transition-all"
+                        data-nav-section="book-audit" type="button">
+                        Book an Audit
+                    </button>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button
+                    class="md:hidden inline-flex items-center justify-center rounded-lg border border-white/10 bg-surfaceDark p-2 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors"
+                    id="agency-mobile-toggle" type="button">
+                    <span class="sr-only">Open main menu</span>
+                    <svg id="agency-icon-open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="agency-icon-close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Nav -->
+            <div id="agency-mobile-menu" class="md:hidden hidden border-t border-white/10 pb-4 pt-2">
+                <div class="flex flex-col gap-1 text-sm font-medium">
+                    <button
+                        class="text-left px-3 py-3 rounded-lg text-zinc-400 hover:text-white hover:bg-surfaceDark transition-colors"
+                        data-nav-section="home" type="button">
+                        Home
+                    </button>
+                    <button
+                        class="text-left px-3 py-3 rounded-lg text-zinc-400 hover:text-white hover:bg-surfaceDark transition-colors"
+                        data-nav-section="services" type="button">
+                        Capabilities
+                    </button>
+                    <button id="mobile-nav-agenario"
+                        class="text-left px-3 py-3 rounded-lg text-zinc-400 hover:text-accentText hover:bg-surfaceDark transition-colors flex items-center gap-2"
+                        type="button">
+                        <i class="fa-solid fa-shield-halved text-[10px] text-accentViolet"></i>
+                        Security Engine
+                    </button>
+                    <button
+                        class="mt-2 text-center btn-primary rounded-lg px-4 py-3 text-xs font-semibold transition-all w-full"
+                        data-nav-section="book-audit" type="button">
+                        Book an Audit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========= MAIN CONTENT ========= -->
+    <main class="flex-1">
+        <!-- HERO -->
+        <section id="home" class="relative overflow-hidden pt-16 pb-24 sm:pt-24 sm:pb-32">
+            <!-- Abstract Background -->
+            <div class="absolute inset-0 -z-10 bg-baseDark">
+                <div
+                    class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-accentBlur opacity-[0.07] blur-[120px] pointer-events-none">
+                </div>
+                <div
+                    class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-accentTeal opacity-[0.05] blur-[100px] pointer-events-none">
+                </div>
+                <!-- Fine grid overlay -->
+                <div
+                    class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBNMzAuNSAwcTguNSAzOS41IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-30 [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)]">
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="grid lg:grid-cols-[1.2fr,1fr] gap-12 lg:gap-16 items-center">
+
+                    <!-- Hero Copy -->
+                    <div class="relative z-10">
+                        <div class="mb-6">
+                            <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-500 mb-1">Your Virtual Workforce
+                            </p>
+                            <p class="text-sm font-semibold text-zinc-100 flex items-center gap-2">
+                                <i class="fa-solid fa-users text-indigo-500 text-xs"></i> Intelligent Automation Hub
+                            </p>
+                        </div>
+
+                        <h1
+                            class="text-4xl sm:text-5xl lg:text-[4rem] leading-[1.1] font-bold tracking-tight text-white mb-6">
+                            Stop Missing Calls.<br />
+                            <span class="text-gradient">Automate Your Business</span><br />
+                            Grow Automatically.
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-zinc-400 max-w-xl font-light leading-relaxed mb-8">
+                            We build intelligent systems that answer your phones 24/7, book appointments automatically,
+                            and handle your repetitive admin tasks—so you can focus on your customers.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                            <button type="button" data-nav-section="book-audit"
+                                class="w-full sm:w-auto btn-primary rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide flex items-center justify-center gap-2 group">
+                                Book Custom ROI Audit
+                                <i
+                                    class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                            </button>
+                            <button type="button" data-nav-section="services"
+                                class="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-zinc-700 bg-surfaceDark px-8 py-3.5 text-sm font-medium text-zinc-300 hover:text-white hover:border-zinc-500 hover:bg-zinc-800 transition-all">
+                                Explore Capabilities
+                            </button>
+                        </div>
+
+                        <div class="mt-10 flex flex-wrap items-center gap-6 text-sm text-zinc-400 font-medium">
+                            <a href="https://govira.tech" target="_blank"
+                                class="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-indigo-500/50 transition-all text-white group">
+                                <i class="fa-solid fa-handshake text-indigo-400"></i>
+                                <span>A <span
+                                        class="font-bold text-base tracking-wide group-hover:text-indigo-400 transition-colors">Govira.tech</span></span>
+                            </a>
+                            <div class="flex items-center gap-2 text-indigo-400/80">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Secured by Agenario™</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual (Premium Redesign) -->
+                    <div class="relative lg:ml-auto w-full max-w-lg mx-auto lg:max-w-none perspective-1000">
+                        <!-- Glow behind card -->
+                        <div class="absolute inset-0 bg-accentViolet opacity-[0.15] blur-[100px] rounded-full"></div>
+                        <div
+                            class="absolute top-1/4 right-1/4 bg-accentTeal opacity-[0.15] blur-[80px] w-64 h-64 rounded-full">
+                        </div>
+
+                        <div class="relative p-6 sm:p-8 animate-float z-10">
+
+                            <!-- Master Central Core -->
+                            <div
+                                class="relative w-full aspect-square max-w-[400px] mx-auto flex items-center justify-center">
+
+                                <!-- Orbit Rings -->
+                                <div
+                                    class="absolute inset-0 border border-white/5 rounded-full scale-[0.8] animate-[spin_40s_linear_infinite]">
+                                </div>
+                                <div
+                                    class="absolute inset-0 border border-indigo-500/20 rounded-full scale-[0.6] animate-[spin_30s_linear_infinite_reverse]">
+                                </div>
+                                <div
+                                    class="absolute inset-0 border border-teal-500/20 rounded-full scale-[0.4] animate-[spin_20s_linear_infinite]">
+                                </div>
+
+                                <!-- Central Core Node -->
+                                <div
+                                    class="relative z-20 w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500 via-purple-600 to-baseDark flex flex-col items-center justify-center shadow-[0_0_40px_rgba(99,102,241,0.5)] border border-white/20">
+                                    <i class="fa-solid fa-bolt text-2xl text-white mb-1 shadow-glow"></i>
+                                    <span
+                                        class="text-[9px] font-bold tracking-[0.2em] text-white uppercase">Growth</span>
+                                </div>
+
+                                <!-- Orbiting Elements (Categories) -->
+                                <!-- Sales -->
+                                <div class="absolute top-[5%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-30">
+                                    <div
+                                        class="premium-glass px-4 py-2 rounded-xl flex items-center gap-2 border-indigo-500/30 hover:scale-105 transition-transform cursor-default">
+                                        <div
+                                            class="h-6 w-6 rounded-full bg-indigo-500/20 flex items-center justify-center">
+                                            <i class="fa-solid fa-chart-line text-indigo-400 text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-[10px] font-bold text-white uppercase tracking-wider">
+                                                Bookings</p>
+                                            <p class="text-[8px] text-zinc-400">Never Miss a Call</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Support -->
+                                <div class="absolute bottom-[20%] right-[-5%] z-30">
+                                    <div
+                                        class="premium-glass px-4 py-2 rounded-xl flex items-center gap-2 border-teal-500/30 hover:scale-105 transition-transform cursor-default">
+                                        <div
+                                            class="h-6 w-6 rounded-full bg-teal-500/20 flex items-center justify-center">
+                                            <i class="fa-solid fa-headset text-teal-400 text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-[10px] font-bold text-white uppercase tracking-wider">
+                                                Customers</p>
+                                            <p class="text-[8px] text-zinc-400">Instant Answers</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Logic -->
+                                <div class="absolute bottom-[10%] left-[0%] z-30">
+                                    <div
+                                        class="premium-glass px-4 py-2 rounded-xl flex items-center gap-2 border-purple-500/30 hover:scale-105 transition-transform cursor-default">
+                                        <div
+                                            class="h-6 w-6 rounded-full bg-purple-500/20 flex items-center justify-center">
+                                            <i class="fa-solid fa-brain text-purple-400 text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-[10px] font-bold text-white uppercase tracking-wider">Admin
+                                            </p>
+                                            <p class="text-[8px] text-zinc-400">Automated Filing</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Data connections mimicking data flow -->
+                                <svg class="absolute inset-0 w-full h-full -z-10 pointer-events-none"
+                                    viewBox="0 0 400 400">
+                                    <defs>
+                                        <linearGradient id="flowGrad1" x1="0" y1="0" x2="1" y2="1">
+                                            <stop offset="0%" stop-color="#6366f1" stop-opacity="0.8" />
+                                            <stop offset="100%" stop-color="#09090b" stop-opacity="0" />
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Dashed connecting lines that animate -->
+                                    <path d="M200 200 L200 50" stroke="url(#flowGrad1)" stroke-width="2"
+                                        stroke-dasharray="4 4" class="animate-[dash_20s_linear_infinite]" fill="none" />
+                                    <path d="M200 200 L320 280" stroke="url(#flowGrad1)" stroke-width="2"
+                                        stroke-dasharray="4 4" class="animate-[dash_20s_linear_infinite]" fill="none" />
+                                    <path d="M200 200 L80 280" stroke="url(#flowGrad1)" stroke-width="2"
+                                        stroke-dasharray="4 4" class="animate-[dash_20s_linear_infinite]" fill="none" />
+                                </svg>
+                                <style>
+                                    @keyframes dash {
+                                        to {
+                                            stroke-dashoffset: -1000;
+                                        }
+                                    }
+
+                                    .perspective-1000 {
+                                        perspective: 1000px;
+                                    }
+                                </style>
+
+                            </div>
+
+                            <div
+                                class="mt-8 text-center bg-zinc-900/50 backdrop-blur border border-white/5 rounded-2xl p-4 shadow-xl">
+                                <p class="text-sm font-semibold text-white mb-1"><span class="text-gradient">Grow Your
+                                        Business</span> Automatically</p>
+                                <p class="text-xs text-zinc-400">We replace bottlenecks with smart assistants.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 CORE CAPABILITIES -->
+        <section id="services" class="py-24 border-t border-white/[0.03] bg-surfaceDark relative overflow-hidden">
+            <!-- Minimal subtle glow -->
+            <div
+                class="absolute top-0 right-1/4 w-96 h-96 bg-indigo-600/5 rounded-full blur-[100px] pointer-events-none">
+            </div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+                        What We Can Automate For You
+                    </h2>
+                    <p class="text-base text-zinc-400">
+                        We build custom AI agents that work alongside your team, handling the repetitive tasks so you
+                        can focus on growing your business.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid gap-6 md:grid-cols-2">
+                    <!-- 1 -->
+                    <article class="premium-card p-8 rounded-2xl group cursor-default">
+                        <div
+                            class="absolute -top-10 -right-10 w-32 h-32 bg-indigo-500/20 blur-[50px] group-hover:bg-indigo-500/30 transition-colors">
+                        </div>
+                        <div class="mb-6 flex justify-between items-start">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
+                                <i class="fa-solid fa-headset text-indigo-400"></i>
+                            </div>
+                            <span
+                                class="text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 border border-white/10 rounded px-2 py-0.5 bg-white/5">Frontline</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">AI Reception & Booking</h3>
+                        <p class="text-sm text-zinc-400 mb-6">Never miss a new patient or client. Our voice agents
+                            answer calls instantly and professionally.</p>
+                        <ul class="space-y-3 text-sm text-zinc-300">
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-indigo-400"></i> AI Voice
+                                Receptionists (24/7 Phone Answering)</li>
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-indigo-400"></i> Automatic
+                                Appointment Scheduling</li>
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-indigo-400"></i> Outbound Calls to
+                                Qualify Leads</li>
+                        </ul>
+                    </article>
+
+                    <!-- 2 -->
+                    <article class="premium-card p-8 rounded-2xl group cursor-default">
+                        <div
+                            class="absolute -top-10 -right-10 w-32 h-32 bg-purple-500/20 blur-[50px] group-hover:bg-purple-500/30 transition-colors">
+                        </div>
+                        <div class="mb-6 flex justify-between items-start">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
+                                <i class="fa-solid fa-gears text-purple-400"></i>
+                            </div>
+                            <span
+                                class="text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 border border-white/10 rounded px-2 py-0.5 bg-white/5">Back
+                                Office</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Admin & Paperwork</h3>
+                        <p class="text-sm text-zinc-400 mb-6">Stop wasting hours on data entry. We automate your
+                            back-office tasks entirely.</p>
+                        <ul class="space-y-3 text-sm text-zinc-300">
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-purple-400"></i> Automatic Invoice &
+                                Receipt Processing</li>
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-purple-400"></i> Client Onboarding
+                                Forms Automation</li>
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-purple-400"></i> Sync Data Across
+                                Your Software Instantly</li>
+                        </ul>
+                    </article>
+
+                    <!-- 3 -->
+                    <article class="premium-card p-8 rounded-2xl group cursor-default">
+                        <div
+                            class="absolute -top-10 -right-10 w-32 h-32 bg-teal-500/20 blur-[50px] group-hover:bg-teal-500/30 transition-colors">
+                        </div>
+                        <div class="mb-6 flex justify-between items-start">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center">
+                                <i class="fa-solid fa-database text-teal-400"></i>
+                            </div>
+                            <span
+                                class="text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 border border-white/10 rounded px-2 py-0.5 bg-white/5">Intelligence</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Customer Support</h3>
+                        <p class="text-sm text-zinc-400 mb-6">Give your customers instant answers to their common
+                            questions across any channel.</p>
+                        <ul class="space-y-3 text-sm text-zinc-300">
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-teal-400"></i> Smart Website Chatbots
+                                that Actually Work</li>
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-teal-400"></i> Automated Email &
+                                WhatsApp Replies</li>
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-teal-400"></i> Internal Knowledge
+                                Base for Your Staff</li>
+                        </ul>
+                    </article>
+
+                    <!-- 4 -->
+                    <article class="premium-card p-8 rounded-2xl group cursor-default">
+                        <div
+                            class="absolute -top-10 -right-10 w-32 h-32 bg-zinc-500/20 blur-[50px] group-hover:bg-zinc-500/30 transition-colors">
+                        </div>
+                        <div class="mb-6 flex justify-between items-start">
+                            <div
+                                class="h-10 w-10 rounded-lg bg-zinc-700/30 border border-zinc-600/50 flex items-center justify-center">
+                                <i class="fa-solid fa-server text-zinc-300"></i>
+                            </div>
+                            <span
+                                class="text-[10px] uppercase tracking-[0.2em] font-medium text-zinc-500 border border-white/10 rounded px-2 py-0.5 bg-white/5">Safety
+                                & Management</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Security & Management</h3>
+                        <p class="text-sm text-zinc-400 mb-6">You always stay in control. Your data is secure and you
+                            can monitor everything your AI does.</p>
+                        <ul class="space-y-3 text-sm text-zinc-300">
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-zinc-400"></i> Full Dashboard to See
+                                AI Actions</li>
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-zinc-400"></i> Strict Privacy for
+                                Customer Data</li>
+                            <li class="flex items-start gap-3"><i
+                                    class="fa-solid fa-check text-[10px] mt-1 text-zinc-400"></i> Easy "Human Handoff"
+                                When Needed</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- AGENARIO MOAT -->
+        <section id="agenario-moat" class="py-24 border-t border-white/[0.03] bg-baseDark">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-[1.2fr,1fr] gap-16 items-center">
+
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.2em] text-indigo-400 font-medium mb-3">The
+                            Defensible Edge</p>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+                            Red-Teamed by <span class="text-gradient">Agenario™</span>
+                        </h2>
+                        <p class="text-base text-zinc-400 mb-8 leading-relaxed">
+                            Most agencies deploy wrappers and pray. We subject every system we build to our proprietary
+                            adversarial testing engine. We ensure your agents are resilient against injection,
+                            hallucination, and policy violations before hitting production.
+                        </p>
+                        <ul class="space-y-4 text-sm text-zinc-300 mb-8">
+                            <li class="flex gap-4 p-3 rounded-lg border border-white/5 bg-white/[0.02]">
+                                <div class="mt-0.5"><i class="fa-solid fa-bug text-indigo-400"></i></div>
+                                <div>
+                                    <strong class="block text-white mb-1">Adversarial Exploitation Testing</strong>
+                                    <span class="text-zinc-500 text-xs text-balance">Simulated prompt injections,
+                                        jailbreaks, and data extraction attempts to harden system boundaries.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-4 p-3 rounded-lg border border-white/5 bg-white/[0.02]">
+                                <div class="mt-0.5"><i class="fa-solid fa-scale-balanced text-indigo-400"></i></div>
+                                <div>
+                                    <strong class="block text-white mb-1">Regulatory Standard Compliance</strong>
+                                    <span class="text-zinc-500 text-xs text-balance">Rigorous benchmarking against the
+                                        EU AI Act & NIST AI Risk Management Framework.</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button type="button" id="btn-view-agenario"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-indigo-400 transition-colors group">
+                            Enter the Security Engine Environment
+                            <i
+                                class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+
+                    <div class="relative flex items-center justify-center lg:ml-auto w-full max-w-sm">
+                        <div class="absolute inset-0 bg-indigo-500/10 blur-[80px] rounded-full"></div>
+                        <div
+                            class="relative z-10 p-8 text-center premium-card rounded-3xl border border-white/5 w-full">
+                            <div
+                                class="inline-flex h-20 w-20 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 items-center justify-center mb-6 shadow-[0_0_30px_rgba(99,102,241,0.2)]">
+                                <i class="fa-solid fa-shield-halved text-4xl text-indigo-400"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white tracking-wide mb-2">Agenario Guards</h3>
+                            <p class="text-sm text-zinc-400">Deterministic policy validation routing for all LLM
+                                outputs.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOK AN AUDIT -->
+        <section id="book-audit" class="py-24 border-t border-white/[0.03] bg-surfaceDark">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-16 lg:grid-cols-[1fr,1.1fr] items-start">
+
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+                        Quantify your AI ROI.
+                    </h2>
+                    <p class="text-base text-zinc-400 mb-8 leading-relaxed">
+                        We conduct a rapid, high-impact assessment of your operations to identify where multi-agent
+                        systems and automations can drive the most compounded value without compromising security.
+                    </p>
+                    <div class="pl-4 border-l-2 border-indigo-500/50 space-y-4">
+                        <p class="text-sm text-zinc-300"><span class="text-white font-semibold">1. Discovery.</span> We
+                            map high-bandwidth manual workflows.</p>
+                        <p class="text-sm text-zinc-300"><span class="text-white font-semibold">2. Architecture.</span>
+                            We design an agentic intervention layer.</p>
+                        <p class="text-sm text-zinc-300"><span class="text-white font-semibold">3. Projection.</span> We
+                            model cost reduction and scaling velocity.</p>
+                    </div>
+
+                </div>
+
+                <div class="premium-card rounded-2xl p-8 sm:p-10 border border-white/5">
+                    <h3 class="text-xl font-semibold text-white mb-2">Request an Assessment</h3>
+                    <p class="text-xs text-zinc-500 mb-8">Direct engineering contact within 24 hours.</p>
+
+                    <form action="https://formsubmit.co/pranav@agenario.tech" method="POST" class="space-y-5">
+                        <input type="hidden" name="_subject" value="New Agenario Audit Request - Agency Template">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label
+                                    class="block text-[10px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">Full
+                                    Name</label>
+                                <input type="text" name="full_name" required
+                                    class="w-full bg-baseDark/50 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                    placeholder="Ada Lovelace" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-[10px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">Work
+                                    Email</label>
+                                <input type="email" name="work_email" required
+                                    class="w-full bg-baseDark/50 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                    placeholder="ada@company.com" />
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label
+                                    class="block text-[10px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">Company
+                                    Name</label>
+                                <input type="text" name="company_name" required
+                                    class="w-full bg-baseDark/50 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                    placeholder="Acme Logistics" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-[10px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">Role
+                                    / Title</label>
+                                <input type="text" name="job_title" required
+                                    class="w-full bg-baseDark/50 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                    placeholder="Director of Engineering" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label
+                                class="block text-[10px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">Operational
+                                Bottleneck</label>
+                            <textarea name="project_details" required rows="3"
+                                class="w-full bg-baseDark/50 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all resize-none"
+                                placeholder="Briefly describe the workflow you need to automate or scale..."></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full btn-primary rounded-lg py-3.5 text-sm font-semibold tracking-wide transition-all mt-2">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="border-t border-white/[0.05] bg-baseDark py-10">
+            <div
+                class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="h-6 w-6 rounded border border-white/10 bg-white/5 flex items-center justify-center">
+                        <span class="text-[9px] font-bold text-white">AG</span>
+                    </div>
+                    <span class="text-xs text-zinc-500 font-medium">© 2026 Agenario Labs. A <a
+                            href="https://govira.tech" target="_blank"
+                            class="text-indigo-400 hover:text-indigo-300 transition-colors">Govira.tech</a> Company. All
+                        rights reserved.</span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <span class="text-xs text-zinc-500">Scale operations securely.</span>
+                    <button type="button" data-nav-section="book-audit"
+                        class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition-colors">
+                        Initiate Audit →
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </main>
+</div>

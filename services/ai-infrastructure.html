@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Infrastructure & Governance - Agenario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { baseDark: '#09090b', surfaceDark: '#111114', accentViolet: '#7c3aed', accentTeal: '#0d9488' },
+                    fontFamily: { heading: ['Outfit', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: #09090b;
+            color: #e4e4e7;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .premium-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header class="border-b border-white/[0.05] p-6 lg:px-8 relative z-10 bg-baseDark/50 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-3 group">
+                <img src="../Agenario.jpg" alt="Agenario Logo" class="h-10 w-auto rounded-md object-contain" />
+                <span
+                    class="font-semibold text-white tracking-wide group-hover:text-zinc-300 transition-colors">Agenario
+                    Labs</span>
+            </a>
+            <a href="../index.html" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">&larr;
+                Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Animated Ambient Background Layer -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div
+            class="absolute top-[10%] left-[-20%] w-[60%] h-[60%] rounded-full bg-zinc-500/10 blur-[120px] mix-blend-screen animate-[pulse_10s_ease-in-out_infinite]">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[10%] w-[50%] h-[50%] rounded-full bg-stone-500/10 blur-[100px] mix-blend-screen animate-[pulse_12s_ease-in-out_infinite_reverse]">
+        </div>
+        <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBNMzAuNSAwcTguNSAzOS41IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-40 [mask-image:linear-gradient(to_bottom,white,transparent)]">
+        </div>
+    </div>
+
+    <main class="flex-grow py-16 px-4 sm:px-6 relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-12 text-center">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-zinc-500/10 border border-zinc-500/20 text-zinc-300 text-xs font-semibold tracking-wider uppercase mb-4">The
+                    Moat</span>
+                <h1 class="text-4xl sm:text-5xl font-bold text-white mb-6">AI Infrastructure & Governance</h1>
+                <p class="text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">As companies rapidly adopt AI, they
+                    worry about security, hallucinations, compliance, and explosive token costs. We become their
+                    comprehensive AI architect.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6 mb-16">
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-zinc-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-zinc-500/10 border border-zinc-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-magnifying-glass-dollar text-zinc-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">AI Readiness & ROI Audits</h3>
+                    <p class="text-sm text-zinc-400">Identify precise workflows where strategic AI injection will
+                        produce the highest compounded ROI.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-zinc-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-zinc-500/10 border border-zinc-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-layer-group text-zinc-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Architecture Consulting</h3>
+                    <p class="text-sm text-zinc-400">Design full-stack AI networks: vector DBs, orchestrations logic,
+                        and appropriate base models.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-zinc-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-zinc-500/10 border border-zinc-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-shield-halved text-zinc-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">LLM Guardrails & Security Systems</h3>
+                    <p class="text-sm text-zinc-400">Deploy deterministic validation layers to prevent hallucinations,
+                        prompt injection, and data leaks.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-zinc-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-zinc-500/10 border border-zinc-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-server text-zinc-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Local LLM Deployment</h3>
+                    <p class="text-sm text-zinc-400">Install and fine-tune secure, open-source models completely
+                        contained on private internal servers.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-zinc-500/30 transition-colors sm:col-span-2">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-zinc-500/10 border border-zinc-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-money-bill-transfer text-zinc-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">AI Cost Optimization</h3>
+                    <p class="text-sm text-zinc-400">Reduce LLM token costs drastically by routing simpler tasks to
+                        cheaper models automatically.</p>
+                </div>
+            </div>
+
+            <div
+                class="premium-card rounded-2xl p-8 sm:p-10 border border-zinc-500/20 bg-gradient-to-br from-zinc-500/10 to-transparent flex flex-col md:flex-row gap-10 items-center justify-between">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-shield-cat text-zinc-300 text-xl"></i> Enterprise Resilience
+                    </h2>
+                    <p class="text-zinc-300 mb-4 font-medium text-lg leading-relaxed">
+                        Your foundation determines your ceiling. A proper AI architecture prevents catastrophic data
+                        leaks and stops rogue LLM hallucination in its tracks.
+                    </p>
+                    <p class="text-zinc-400 text-sm">Building the bridge between cutting-edge foundational models and
+                        complex enterprise security requirements.</p>
+                </div>
+
+                <div
+                    class="bg-baseDark/80 p-8 rounded-xl border border-zinc-500/30 shadow-[0_0_30px_rgba(113,113,122,0.15)] min-w-[300px] text-center">
+                    <h4 class="text-xs text-zinc-400 uppercase tracking-[0.2em] font-bold mb-4">Security Posture
+                    </h4>
+                    <div class="text-3xl font-extrabold text-white tracking-tight mb-2">Zero</div>
+                    <p class="text-sm text-zinc-500 font-medium">Acceptable Vulnerabilities</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

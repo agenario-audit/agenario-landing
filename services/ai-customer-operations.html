@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Customer Operations - Agenario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { baseDark: '#09090b', surfaceDark: '#111114', accentViolet: '#7c3aed', accentTeal: '#0d9488' },
+                    fontFamily: { heading: ['Outfit', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: #09090b;
+            color: #e4e4e7;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .premium-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header class="border-b border-white/[0.05] p-6 lg:px-8 relative z-10 bg-baseDark/50 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-3 group">
+                <img src="../Agenario.jpg" alt="Agenario Logo" class="h-10 w-auto rounded-md object-contain" />
+                <span
+                    class="font-semibold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Agenario
+                    Labs</span>
+            </a>
+            <a href="../index.html" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">&larr;
+                Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Animated Ambient Background Layer -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div
+            class="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full bg-indigo-600/10 blur-[120px] mix-blend-screen animate-[pulse_8s_ease-in-out_infinite]">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-purple-600/10 blur-[100px] mix-blend-screen animate-[pulse_10s_ease-in-out_infinite_reverse]">
+        </div>
+        <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBNMzAuNSAwcTguNSAzOS41IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-40 [mask-image:linear-gradient(to_bottom,white,transparent)]">
+        </div>
+    </div>
+
+    <main class="flex-grow py-16 px-4 sm:px-6 relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-12 text-center">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold tracking-wider uppercase mb-4">Revenue
+                    + Customer Handling</span>
+                <h1 class="text-4xl sm:text-5xl font-bold text-white mb-6">AI Customer Operations</h1>
+                <p class="text-lg text-zinc-400 max-w-2xl mx-auto">This is the highest demand AI market right now.
+                    Companies want to replace or augment call centers and support teams.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6 mb-16">
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-indigo-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-phone text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">AI Voice Receptionists</h3>
+                    <p class="text-sm text-zinc-400">24/7 phone agents for answering calls, routing, and booking
+                        appointments.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-indigo-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-bullseye text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Lead Qualification Callers</h3>
+                    <p class="text-sm text-zinc-400">Outbound voice agents that call leads, qualify them, and transfer
+                        hot prospects.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-indigo-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-comments text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Omnichannel Agents</h3>
+                    <p class="text-sm text-zinc-400">AI chatbots trained on company knowledge deployed on website,
+                        WhatsApp, SMS.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-indigo-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-earth-americas text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Multilingual Interaction</h3>
+                    <p class="text-sm text-zinc-400">Agents that interact with customers in 50+ languages in real time.
+                    </p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-indigo-500/30 transition-colors sm:col-span-2">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-cart-shopping text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">AI Sales Follow-up & Cart Recovery</h3>
+                    <p class="text-sm text-zinc-400">SMS/chat agents that follow up on abandoned carts and convert them
+                        securely.</p>
+                </div>
+            </div>
+
+            <div
+                class="premium-card rounded-2xl p-8 sm:p-10 border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-transparent">
+                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                    <i class="fa-solid fa-bolt text-indigo-400 text-xl"></i> Why this is powerful
+                </h2>
+                <p class="text-zinc-300 mb-8 max-w-xl">Every missed call is a missed opportunity. Our intelligent
+                    systems guarantee instant response times and flawless customer handling at any hour.</p>
+
+                <div class="grid sm:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-baseDark/80 p-6 rounded-xl border border-white/5 text-center">
+                        <div class="text-3xl font-bold text-indigo-400 tracking-tight mb-2">24/7</div>
+                        <h4 class="text-[10px] text-zinc-400 uppercase tracking-widest font-semibold">Continuous
+                            Operation</h4>
+                    </div>
+                    <div class="bg-baseDark/80 p-6 rounded-xl border border-white/5 text-center">
+                        <div class="text-3xl font-bold text-indigo-400 tracking-tight mb-2">0%</div>
+                        <h4 class="text-[10px] text-zinc-400 uppercase tracking-widest font-semibold">Dropped Leads</h4>
+                    </div>
+                    <div class="bg-baseDark/80 p-6 rounded-xl border border-white/5 text-center">
+                        <div class="text-3xl font-bold text-indigo-400 tracking-tight mb-2">
+                            < 1s</div>
+                                <h4 class="text-[10px] text-zinc-400 uppercase tracking-widest font-semibold">Response
+                                    Time</h4>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-indigo-500/20 pt-6">
+                        <h4 class="text-sm font-semibold text-white mb-2">The Competitive Advantage</h4>
+                        <p class="text-sm text-zinc-400">Transform your customer operations from a bottleneck into an
+                            automated, highly-scalable growth engine that never sleeps.</p>
+                    </div>
+                </div>
+
+            </div>
+    </main>
+</body>
+
+</html>

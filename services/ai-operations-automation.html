@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Operations Automation - Agenario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { baseDark: '#09090b', surfaceDark: '#111114', accentViolet: '#7c3aed', accentTeal: '#0d9488' },
+                    fontFamily: { heading: ['Outfit', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: #09090b;
+            color: #e4e4e7;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .premium-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header class="border-b border-white/[0.05] p-6 lg:px-8 relative z-10 bg-baseDark/50 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-3 group">
+                <img src="../Agenario.jpg" alt="Agenario Logo" class="h-10 w-auto rounded-md object-contain" />
+                <span
+                    class="font-semibold text-white tracking-wide group-hover:text-purple-400 transition-colors">Agenario
+                    Labs</span>
+            </a>
+            <a href="../index.html" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">&larr;
+                Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Animated Ambient Background Layer -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div
+            class="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-purple-600/10 blur-[120px] mix-blend-screen animate-[pulse_9s_ease-in-out_infinite]">
+        </div>
+        <div
+            class="absolute bottom-[10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-600/10 blur-[100px] mix-blend-screen animate-[pulse_11s_ease-in-out_infinite_reverse]">
+        </div>
+        <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBNMzAuNSAwcTguNSAzOS41IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-40 [mask-image:linear-gradient(to_bottom,white,transparent)]">
+        </div>
+    </div>
+
+    <main class="flex-grow py-16 px-4 sm:px-6 relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-12 text-center">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-semibold tracking-wider uppercase mb-4">Back
+                    Office Efficiency</span>
+                <h1 class="text-4xl sm:text-5xl font-bold text-white mb-6">AI Operations Automation</h1>
+                <p class="text-lg text-zinc-400 max-w-2xl mx-auto">This category is massively valuable. Companies hate
+                    manual work like invoices, documents, onboarding, and HR queries. AI can automate these.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6 mb-16">
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-purple-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-file-invoice text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Invoice & Document Processing</h3>
+                    <p class="text-sm text-zinc-400">AI extracts data from invoices, PDFs, forms, and seamlessly updates
+                        ERP systems.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-purple-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-money-bill-wave text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Accounts Receivable</h3>
+                    <p class="text-sm text-zinc-400">AI agents that autonomously follow up on unpaid invoices via email
+                        and SMS.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-purple-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-user-plus text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Client & Employee Onboarding</h3>
+                    <p class="text-sm text-zinc-400">Zero-touch systems creating accounts, folders, contracts, and
+                        software access.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-purple-500/30 transition-colors">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-database text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">CRM Data Sync & Enrichment</h3>
+                    <p class="text-sm text-zinc-400">Automation ensuring CRM, billing, and marketing data stay
+                        synchronized 24/7.</p>
+                </div>
+
+                <div
+                    class="premium-card p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-purple-500/30 transition-colors sm:col-span-2">
+                    <div
+                        class="h-10 w-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-robot text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Internal AI Knowledge Assistants</h3>
+                    <p class="text-sm text-zinc-400">Secure chat agents that answer employee HR and ops questions using
+                        company documentation.</p>
+                </div>
+            </div>
+
+            <div
+                class="premium-card rounded-2xl p-8 sm:p-10 border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-transparent flex flex-col md:flex-row gap-10 items-center justify-between">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-arrow-trend-up text-purple-400 text-xl"></i> Precision at Scale
+                    </h2>
+                    <p class="text-zinc-300 mb-4 font-medium text-lg leading-relaxed">
+                        Back office automation eliminates human error and accelerates processing times from days to
+                        seconds.
+                    </p>
+                    <p class="text-zinc-400 text-sm">Scale your business operations exponentially without linearly
+                        increasing your administrative headcount.</p>
+                </div>
+
+                <div
+                    class="bg-baseDark/80 p-8 rounded-xl border border-purple-500/30 shadow-2xl min-w-[250px] text-center">
+                    <h4
+                        class="text-xs text-purple-300 uppercase tracking-widest font-bold mb-4 border-b border-white/10 pb-2">
+                        Impact</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-3xl font-bold text-white tracking-tight">100%</div>
+                            <div class="text-[10px] text-zinc-400 uppercase tracking-wider mt-1">Data Accuracy</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-purple-400 tracking-tight">10x</div>
+                            <div class="text-[10px] text-zinc-400 uppercase tracking-wider mt-1">Processing Speed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
