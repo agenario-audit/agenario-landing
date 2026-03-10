@@ -417,26 +417,35 @@
         <div id="agency-mobile-menu" class="md:hidden hidden border-t border-white/10 pb-4 pt-2">
           <div class="flex flex-col gap-1 text-sm font-medium">
             <button
-              class="text-left px-3 py-3 rounded-lg text-zinc-400 hover:text-white hover:bg-surfaceDark transition-colors"
+              class="text-left px-4 py-3 rounded-lg text-zinc-400 hover:text-white hover:bg-surfaceDark transition-colors"
               data-nav-section="home" type="button">
               Home
             </button>
-            <button
-              class="text-left px-3 py-3 rounded-lg text-zinc-400 hover:text-white hover:bg-surfaceDark transition-colors"
-              data-nav-section="services" type="button">
-              Capabilities
-            </button>
+            <div class="px-4 py-2 mt-2">
+              <span class="text-xs uppercase tracking-wider text-zinc-500 font-bold mb-2 block">Our Services</span>
+              <div class="flex flex-col gap-1 pl-2 border-l border-white/10">
+                <a href="services/ai-customer-operations.html"
+                  class="py-2 text-zinc-400 hover:text-white transition-colors">AI Reception & Leads</a>
+                <a href="services/ai-operations-automation.html"
+                  class="py-2 text-zinc-400 hover:text-white transition-colors">Automated Admin</a>
+                <a href="services/ai-knowledge-systems.html"
+                  class="py-2 text-zinc-400 hover:text-white transition-colors">Instant Support Bots</a>
+                <a href="services/ai-infrastructure.html"
+                  class="py-2 text-zinc-400 hover:text-white transition-colors">Secure Setup & Safety</a>
+              </div>
+            </div>
             <button id="mobile-nav-agenario"
-              class="text-left px-3 py-3 rounded-lg text-zinc-400 hover:text-accentText hover:bg-surfaceDark transition-colors flex items-center gap-2"
+              class="mt-2 text-left px-4 py-3 rounded-lg text-zinc-400 hover:text-accentText hover:bg-surfaceDark transition-colors flex items-center gap-2"
               type="button">
               <i class="fa-solid fa-shield-halved text-[10px] text-accentViolet"></i>
               Security Engine
             </button>
-            <button
-              class="mt-2 text-center btn-primary rounded-lg px-4 py-3 text-xs font-semibold transition-all w-full"
-              data-nav-section="book-audit" type="button">
-              Book an Audit
-            </button>
+            <div class="px-4 mt-4">
+              <button class="text-center btn-primary rounded-lg px-4 py-3 text-xs font-semibold transition-all w-full"
+                data-nav-section="book-audit" type="button">
+                Book an Audit
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -472,10 +481,11 @@
               </div>
 
               <div class="mb-6">
-                <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-500 mb-1">Your Virtual Workforce
+                <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-500 mb-1">Honest & Practical Tech
                 </p>
                 <p class="text-sm font-semibold text-zinc-100 flex items-center gap-2">
-                  <i class="fa-solid fa-users text-indigo-500 text-xs"></i> 24/7 Automated Growth Engine
+                  <i class="fa-solid fa-handshake-angle text-indigo-500 text-xs"></i> Free Call: We'll tell you honestly
+                  if you even need AI.
                 </p>
               </div>
 
