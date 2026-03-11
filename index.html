@@ -32,22 +32,22 @@
       theme: {
         extend: {
           colors: {
-            // New dark premium palette
-            baseDark: '#09090b',       // Zinc 950
-            surfaceDark: '#111114',
-            surfaceGlow: '#1a1a24',
-            accentBlur: '#4f46e5',     // Indigo
-            accentViolet: '#7c3aed',   // Violet
-            accentTeal: '#0d9488',     // Teal
-            accentText: '#c7d2fe',     // Indigo 200
+            // Premium Diamond Noir Palette — Black, Gold, Diamond Blue
+            baseDark: '#0A0A0A',       // Pure Noir Black
+            surfaceDark: '#121A22',    // Midnight Surface
+            surfaceGlow: '#1B2D3E',    // Deep Diamond Blue Surface
+            accentBlur: '#1B3D5E',     // Oxford Diamond Blue
+            accentViolet: '#C9A84C',   // Venetian Gold (renamed, same slot)
+            accentTeal: '#1B3D5E',     // Oxford Diamond Blue
+            accentText: '#E2DFDA',     // Platinum White
 
-            // Old Palette (Kept for Engine section)
-            bg: '#18122B',
-            primary: '#3A1C71',
-            secondary: '#2A9D8F',
+            // Secondary Palette
+            bg: '#0A0A0A',
+            primary: '#1B3D5E',        // Diamond Blue
+            secondary: '#C9A84C',      // Venetian Gold
             muted: '#e2e8f0',
-            accentBlue: '#38bdf8',
-            accentEmerald: '#22c55e',
+            accentBlue: '#1B3D5E',
+            accentEmerald: '#C9A84C',
             accentNeutral: '#94a3b8',
           },
           fontFamily: {
@@ -55,10 +55,10 @@
             sans: ['Inter', 'system-ui', 'sans-serif'],
           },
           boxShadow: {
-            glow: '0 0 25px rgba(58,28,113,0.7)',
-            glowCyan: '0 0 25px rgba(42,157,143,0.7)',
-            'premium-glow': '0 0 40px rgba(124,58,237,0.15)',
-            card: '0 4px 24px rgba(0,0,0,0.4)',
+            glow: '0 0 25px rgba(201, 168, 76, 0.6)',
+            glowCyan: '0 0 25px rgba(27, 61, 94, 0.7)',
+            'premium-glow': '0 0 40px rgba(201, 168, 76, 0.12)',
+            card: '0 4px 24px rgba(0,0,0,0.5)',
           },
           animation: {
             pulseGlow: 'pulseGlow 2s infinite',
@@ -66,8 +66,8 @@
           },
           keyframes: {
             pulseGlow: {
-              '0%, 100%': { boxShadow: '0 0 25px rgba(58,28,113,0.7)' },
-              '50%': { boxShadow: '0 0 40px rgba(58,28,113,1)' },
+              '0%, 100%': { boxShadow: '0 0 25px rgba(201, 168, 76, 0.6)' },
+              '50%': { boxShadow: '0 0 50px rgba(201, 168, 76, 0.9)' },
             },
             float: {
               '0%, 100%': { transform: 'translateY(0px)' },
@@ -92,11 +92,11 @@
   <!-- Global + Agenario styles -->
   <style>
     body {
-      background: #09090b;
+      background: #0A0A0A;
       overflow-x: hidden;
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      color: #e4e4e7;
-      /* Zinc 200 */
+      color: #D8D5D0;
+      /* Platinum White */
     }
 
     h1,
@@ -128,9 +128,9 @@
     }
 
     .premium-card:hover {
-      border-color: rgba(124, 58, 237, 0.3);
+      border-color: rgba(201, 168, 76, 0.35);
       transform: translateY(-2px);
-      box-shadow: 0 10px 40px -10px rgba(124, 58, 237, 0.15);
+      box-shadow: 0 10px 40px -10px rgba(201, 168, 76, 0.18);
     }
 
     .premium-card::before {
@@ -144,18 +144,18 @@
     }
 
     .text-gradient {
-      background: linear-gradient(to right, #ffffff, #a5b4fc);
+      background: linear-gradient(to right, #FFFFFF, #C9A84C);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      background: linear-gradient(135deg, #C9A84C 0%, #1B3D5E 100%);
       color: white;
       position: relative;
       z-index: 1;
-      box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+      box-shadow: 0 0 20px rgba(201, 168, 76, 0.25);
       transition: all 0.3s ease;
     }
 
@@ -164,7 +164,7 @@
       position: absolute;
       inset: 0;
       border-radius: inherit;
-      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      background: linear-gradient(135deg, #D4AF5A 0%, #234F77 100%);
       opacity: 0;
       z-index: -1;
       transition: opacity 0.3s ease;
@@ -175,7 +175,7 @@
     }
 
     .btn-primary:hover {
-      box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+      box-shadow: 0 0 35px rgba(201, 168, 76, 0.45);
     }
 
     /* Engine Glass + Glow (Preserved) */
@@ -205,18 +205,18 @@
       position: absolute;
       width: 4px;
       height: 4px;
-      background: radial-gradient(circle, rgba(255, 69, 0, 0.8), transparent);
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.8), transparent);
       border-radius: 50%;
       animation: particleFloat 10s linear infinite;
     }
 
     .particle:nth-child(odd) {
-      background: radial-gradient(circle, rgba(58, 28, 113, 0.8), transparent);
+      background: radial-gradient(circle, rgba(27, 61, 94, 0.9), transparent);
       animation-duration: 12s;
     }
 
     .particle:nth-child(3n) {
-      background: radial-gradient(circle, rgba(42, 157, 143, 0.8), transparent);
+      background: radial-gradient(circle, rgba(226, 223, 218, 0.6), transparent);
       animation-duration: 15s;
     }
 
@@ -273,10 +273,10 @@
   </style>
 </head>
 
-<body class="text-zinc-200 relative antialiased selection:bg-accentViolet selection:text-white">
+<body class="text-zinc-200 relative antialiased selection:bg-[#C9A84C] selection:text-black">
 
   <!-- ================= AGENCY MAIN APP ROOT ================= -->
-  <div id="agency-root" class="min-h-screen flex flex-col bg-baseDark selection:bg-accentViolet selection:text-white">
+  <div id="agency-root" class="min-h-screen flex flex-col bg-baseDark selection:bg-[#C9A84C] selection:text-black">
 
     <!-- Sticky Navbar -->
     <header class="sticky top-0 z-40 border-b border-white/[0.05] premium-glass transition-all duration-300">
@@ -318,7 +318,7 @@
                   <a href="services/ai-customer-operations.html"
                     class="group/item flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
                     <div
-                      class="flex-shrink-0 h-10 w-10 rounded-lg bg-[#D4A574]/10 border border-[#D4A574]/20 flex items-center justify-center group-hover/item:border-indigo-500/40 transition-colors">
+                      class="flex-shrink-0 h-10 w-10 rounded-lg bg-[#D4A574]/10 border border-[#D4A574]/20 flex items-center justify-center group-hover/item:border-[#C9A84C]/40 transition-colors">
                       <i class="fa-solid fa-headset text-[#D4A574]"></i>
                     </div>
                     <div>
@@ -335,7 +335,7 @@
                   <a href="services/ai-operations-automation.html"
                     class="group/item flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
                     <div
-                      class="flex-shrink-0 h-10 w-10 rounded-lg bg-[#D4A574]/10 border border-[#D4A574]/20 flex items-center justify-center group-hover/item:border-purple-500/40 transition-colors">
+                      class="flex-shrink-0 h-10 w-10 rounded-lg bg-[#D4A574]/10 border border-[#D4A574]/20 flex items-center justify-center group-hover/item:border-[#C9A84C]/40 transition-colors">
                       <i class="fa-solid fa-gears text-[#D4A574]"></i>
                     </div>
                     <div>
@@ -459,7 +459,7 @@
         <div class="absolute inset-0 -z-10 bg-baseDark overflow-hidden pointer-events-none">
           <!-- Animated Ambient Background Layer -->
           <div
-            class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-indigo-600/10 blur-[120px] mix-blend-screen animate-[pulse_8s_ease-in-out_infinite]">
+            class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-[#C9A84C]/8 blur-[120px] mix-blend-screen animate-[pulse_8s_ease-in-out_infinite]">
           </div>
           <div
             class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-teal-600/10 blur-[100px] mix-blend-screen animate-[pulse_10s_ease-in-out_infinite_reverse]">
@@ -477,7 +477,7 @@
             <div class="relative z-10">
               <!-- Vibrant Text Background Glow -->
               <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-indigo-600/20 via-[#0F3A52]/10 to-transparent blur-[80px] -z-10 rounded-full pointer-events-none animate-pulse">
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-[#C9A84C]/15 via-[#0F3A52]/10 to-transparent blur-[80px] -z-10 rounded-full pointer-events-none animate-pulse">
               </div>
 
               <div class="mb-6">
@@ -540,7 +540,7 @@
             <!-- Hero Visual (Premium Redesign) -->
             <div class="relative lg:ml-auto w-full max-w-lg mx-auto lg:max-w-none perspective-1000">
               <!-- Glow behind card -->
-              <div class="absolute inset-0 bg-accentViolet opacity-[0.15] blur-[100px] rounded-full"></div>
+              <div class="absolute inset-0 bg-[#C9A84C] opacity-[0.12] blur-[100px] rounded-full"></div>
               <div class="absolute top-1/4 right-1/4 bg-accentTeal opacity-[0.15] blur-[80px] w-64 h-64 rounded-full">
               </div>
 
@@ -618,23 +618,23 @@
                     <defs>
                       <!-- Complex glowing gradients -->
                       <linearGradient id="flowTop" x1="0.5" y1="0.5" x2="0.5" y2="0.125">
-                        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.9" />
+                        <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.9" />
                         <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1" />
                       </linearGradient>
                       <linearGradient id="flowRight" x1="0.5" y1="0.5" x2="0.8" y2="0.7">
                         <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.9" />
                         <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.5" />
-                        <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.1" />
+                        <stop offset="100%" stop-color="#C9A84C" stop-opacity="0.1" />
                       </linearGradient>
                       <linearGradient id="flowLeft" x1="0.5" y1="0.5" x2="0.2" y2="0.7">
                         <stop offset="0%" stop-color="#ec4899" stop-opacity="0.9" />
-                        <stop offset="100%" stop-color="#6366f1" stop-opacity="0.1" />
+                        <stop offset="100%" stop-color="#1B3D5E" stop-opacity="0.1" />
                       </linearGradient>
                       <linearGradient id="perimeter" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4" />
+                        <stop offset="0%" stop-color="#1B3D5E" stop-opacity="0.4" />
                         <stop offset="33%" stop-color="#14b8a6" stop-opacity="0.4" />
                         <stop offset="66%" stop-color="#ec4899" stop-opacity="0.4" />
-                        <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.4" />
+                        <stop offset="100%" stop-color="#C9A84C" stop-opacity="0.4" />
                       </linearGradient>
                       <filter id="hyperGlow" x="-50%" y="-50%" width="200%" height="200%">
                         <feGaussianBlur stdDeviation="8" result="blur" />
@@ -738,7 +738,7 @@
             <article
               class="premium-card p-8 rounded-2xl group cursor-default hover:border-[#D4A574]/50 hover:shadow-[0_0_30px_rgba(212,165,116,0.15)] transition-all duration-500">
               <div
-                class="absolute -top-10 -right-10 w-32 h-32 bg-[#D4A574]/20 blur-[50px] group-hover:bg-indigo-500/40 transition-colors duration-500">
+                class="absolute -top-10 -right-10 w-32 h-32 bg-[#D4A574]/20 blur-[50px] group-hover:bg-[#C9A84C]/20 transition-colors duration-500">
               </div>
               <div class="mb-6 flex justify-between items-start">
                 <div
@@ -766,9 +766,9 @@
 
             <!-- 2 -->
             <article
-              class="premium-card p-8 rounded-2xl group cursor-default hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-500">
+              class="premium-card p-8 rounded-2xl group cursor-default hover:border-[#C9A84C]/50 hover:shadow-[0_0_30px_rgba(201,168,76,0.15)] transition-all duration-500">
               <div
-                class="absolute -top-10 -right-10 w-32 h-32 bg-[#D4A574]/20 blur-[50px] group-hover:bg-purple-500/40 transition-colors duration-500">
+                class="absolute -top-10 -right-10 w-32 h-32 bg-[#D4A574]/20 blur-[50px] group-hover:bg-[#C9A84C]/20 transition-colors duration-500">
               </div>
               <div class="mb-6 flex justify-between items-start">
                 <div
@@ -905,7 +905,7 @@
             <div class="relative flex items-center justify-center lg:ml-auto w-full max-w-sm">
               <div class="absolute inset-0 bg-[#D4A574]/10 blur-[80px] rounded-full delay-150 animate-pulse"></div>
               <div
-                class="relative z-10 p-8 text-center premium-card rounded-3xl border border-white/5 w-full hover:border-indigo-400/50 transition-colors">
+                class="relative z-10 p-8 text-center premium-card rounded-3xl border border-white/5 w-full hover:border-[#C9A84C]/50 transition-colors">
                 <div
                   class="inline-flex h-20 w-20 rounded-2xl bg-[#D4A574]/10 border border-[#D4A574]/20 items-center justify-center mb-6 shadow-[0_0_30px_rgba(212,165,116,0.2)]">
                   <i class="fa-solid fa-shield-check text-4xl text-[#D4A574]"></i>
@@ -935,7 +935,7 @@
             class="premium-card rounded-3xl p-8 sm:p-12 max-w-md mx-auto border border-white/5 hover:border-[#D4A574]/30 transition-colors duration-500 group">
             <div class="relative w-32 h-32 mx-auto mb-8">
               <div
-                class="absolute inset-0 rounded-full bg-[#D4A574]/20 blur-xl group-hover:bg-indigo-500/40 transition-colors duration-500">
+                class="absolute inset-0 rounded-full bg-[#D4A574]/20 blur-xl group-hover:bg-[#C9A84C]/20 transition-colors duration-500">
               </div>
               <img src="1768114035312.jpg" alt="Pranav Raj M."
                 class="relative w-full h-full object-cover rounded-full border-2 border-[#D4A574]/50 shadow-[0_0_30px_rgba(212,165,116,0.3)] grayscale group-hover:grayscale-0 transition-all duration-500">
