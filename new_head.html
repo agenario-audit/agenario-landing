@@ -27,32 +27,32 @@
       theme: {
         extend: {
           colors: {
-            // New dark premium palette
-            baseDark: '#09090b',       // Zinc 950
-            surfaceDark: '#111114',
-            surfaceGlow: '#1a1a24',
-            accentBlur: '#4f46e5',     // Indigo
-            accentViolet: '#7c3aed',   // Violet
-            accentTeal: '#0d9488',     // Teal
-            accentText: '#c7d2fe',     // Indigo 200
+            // Premium Diamond & Gold Luxury Palette
+            baseDark: '#0B0B0B',       // Pure Black
+            surfaceDark: '#0D1B24',    // Dark Diamond Blue
+            surfaceGlow: '#1A3A47',    // Deep Blue-Gray
+            accentBlur: '#0F3A52',     // Diamond Blue
+            accentViolet: '#D4A574',   // Rich Gold (replacing violet)
+            accentTeal: '#0F3A52',     // Diamond Blue (replacing teal)
+            accentText: '#F0F4F8',     // Diamond White (replacing indigo 200)
             
             // Old Palette (Kept for Engine section)
-            bg: '#18122B',
-            primary: '#3A1C71',
-            secondary: '#2A9D8F',
-            muted: '#e2e8f0',
-            accentBlue: '#38bdf8',
-            accentEmerald: '#22c55e',
-            accentNeutral: '#94a3b8',
+            bg: '#0B0B0B',             // Pure Black
+            primary: '#0F3A52',        // Diamond Blue
+            secondary: '#D4A574',      // Rich Gold
+            muted: '#e2e8f0',          // Keep for compatibility
+            accentBlue: '#0F3A52',     // Diamond Blue
+            accentEmerald: '#D4A574',  // Rich Gold
+            accentNeutral: '#94a3b8',  // Keep neutral
           },
           fontFamily: {
             heading: ['Outfit', 'sans-serif'],
             sans: ['Inter', 'system-ui', 'sans-serif'],
           },
           boxShadow: {
-            glow: '0 0 25px rgba(58,28,113,0.7)',
-            glowCyan: '0 0 25px rgba(42,157,143,0.7)',
-            'premium-glow': '0 0 40px rgba(124,58,237,0.15)',
+            glow: '0 0 25px rgba(212, 165, 116, 0.7)',
+            glowCyan: '0 0 25px rgba(15, 58, 82, 0.7)',
+            'premium-glow': '0 0 40px rgba(212, 165, 116, 0.15)',
             card: '0 4px 24px rgba(0,0,0,0.4)',
           },
           animation: {
@@ -61,8 +61,8 @@
           },
           keyframes: {
             pulseGlow: {
-              '0%, 100%': { boxShadow: '0 0 25px rgba(58,28,113,0.7)' },
-              '50%': { boxShadow: '0 0 40px rgba(58,28,113,1)' },
+              '0%, 100%': { boxShadow: '0 0 25px rgba(212, 165, 116, 0.7)' },
+              '50%': { boxShadow: '0 0 40px rgba(212, 165, 116, 1)' },
             },
             float: {
               '0%, 100%': { transform: 'translateY(0px)' },
@@ -87,7 +87,7 @@
   <!-- Global + Agenario styles -->
   <style>
     body {
-      background: #09090b;
+      background: #0B0B0B;
       overflow-x: hidden;
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       color: #e4e4e7; /* Zinc 200 */
@@ -116,9 +116,9 @@
     }
     
     .premium-card:hover {
-      border-color: rgba(124, 58, 237, 0.3);
+      border-color: rgba(212, 165, 116, 0.3);
       transform: translateY(-2px);
-      box-shadow: 0 10px 40px -10px rgba(124, 58, 237, 0.15);
+      box-shadow: 0 10px 40px -10px rgba(212, 165, 116, 0.15);
     }
 
     .premium-card::before {
@@ -130,18 +130,18 @@
     }
 
     .text-gradient {
-      background: linear-gradient(to right, #ffffff, #a5b4fc);
+      background: linear-gradient(to right, #F0F4F8, #D4A574);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      background: linear-gradient(135deg, #D4A574 0%, #0F3A52 100%);
       color: white;
       position: relative;
       z-index: 1;
-      box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+      box-shadow: 0 0 20px rgba(212, 165, 116, 0.3);
       transition: all 0.3s ease;
     }
 
@@ -150,7 +150,7 @@
       position: absolute;
       inset: 0;
       border-radius: inherit;
-      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      background: linear-gradient(135deg, #E8C547 0%, #1A4D5C 100%);
       opacity: 0;
       z-index: -1;
       transition: opacity 0.3s ease;
@@ -161,7 +161,7 @@
     }
     
     .btn-primary:hover {
-      box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+      box-shadow: 0 0 30px rgba(212, 165, 116, 0.5);
     }
 
     /* Engine Glass + Glow (Preserved) */
@@ -172,9 +172,9 @@
       content: ''; position: absolute; inset: -1px; background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.15), transparent 60%); border-radius: inherit; z-index: -1; filter: blur(12px);
     }
     .icon-glow { filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.8)); }
-    .particle { position: absolute; width: 4px; height: 4px; background: radial-gradient(circle, rgba(255, 69, 0, 0.8), transparent); border-radius: 50%; animation: particleFloat 10s linear infinite; }
-    .particle:nth-child(odd) { background: radial-gradient(circle, rgba(58, 28, 113, 0.8), transparent); animation-duration: 12s; }
-    .particle:nth-child(3n) { background: radial-gradient(circle, rgba(42, 157, 143, 0.8), transparent); animation-duration: 15s; }
+    .particle { position: absolute; width: 4px; height: 4px; background: radial-gradient(circle, rgba(212, 165, 116, 0.8), transparent); border-radius: 50%; animation: particleFloat 10s linear infinite; }
+    .particle:nth-child(odd) { background: radial-gradient(circle, rgba(15, 58, 82, 0.8), transparent); animation-duration: 12s; }
+    .particle:nth-child(3n) { background: radial-gradient(circle, rgba(240, 244, 248, 0.8), transparent); animation-duration: 15s; }
     @keyframes particleFloat { 0% { transform: translateY(100vh) rotate(0deg); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-100px) rotate(360deg); opacity: 0; } }
     .marquee-container { overflow: hidden; width: 100%; }
     .marquee-row { display: flex; width: 2000px; animation: marquee 20s linear infinite; }
@@ -182,4 +182,4 @@
     #threejs-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
   </style>
 </head>
-<body class="text-zinc-200 relative antialiased selection:bg-accentViolet selection:text-white">
+<body class="text-zinc-200 relative antialiased selection:bg-[#D4A574] selection:text-white">
